@@ -49,7 +49,7 @@ const HeroSection = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.4 }}
 						className="mt-4 text-lg text-gray-700">
-						Hey there! We're a team of passionate developers, turning ideas into
+						Hey there! We&apos;re a team of passionate developers, turning ideas into
 						sleek, functional, and scalable web applications. From front-end
 						aesthetics to robust back-end solutions, we do it all!
 					</motion.p>
@@ -59,7 +59,7 @@ const HeroSection = () => {
 							href="/contact"
 							className="bg-blue-600 text-white py-3 px-6 rounded-lg 
 							hover:bg-blue-700 transition duration-300">
-							Let's Work Together
+							Let&apos;s Work Together
 						</Link>
 						<Link
 							href="/portfolio"
