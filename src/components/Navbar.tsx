@@ -102,13 +102,6 @@ export default function Navbar() {
 								Login
 							</Link>
 						</li>
-						<li>
-							<Link
-								href="/register"
-								className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition w-full text-center">
-								Register
-							</Link>
-						</li>
 					</ul>
 				</div>
 			)}
