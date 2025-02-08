@@ -93,13 +93,13 @@ const TechStack: React.FC = () => {
 				<h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
 					Techstack We Use
 				</h2>
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-content-center">
+				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-content-center">
 					{skills.map((skillGroup) => (
 						<div key={skillGroup.category} className="col-span-1">
 							<h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
 								{skillGroup.category}
 							</h3>
-							<div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 mb-11 ">
+							<div className="grid grid-cols-2  md:grid-cols-3 gap-y-4 mb-11  ">
 								{skillGroup.items.map((skill) => (
 									<div
 										key={skill.name}

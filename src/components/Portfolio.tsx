@@ -107,7 +107,7 @@ const Portfolio = () => {
 								alt={project.title}
 								width={400}
 								height={160}
-								className="w-full h-40 object-cover rounded-lg"
+								className="w-full h-20 sm:h-40 object-cover rounded-lg"
 							/>
 							<h2 className="text-2xl font-semibold  mt-4">{project.title}</h2>
 							<p className=" mt-2">{project.description}</p>

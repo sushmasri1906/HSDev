@@ -4,6 +4,7 @@ import TechStack from "@/components/TechStack";
 import Testimonials from "@/components/Testimonials";
 import Certifications from "@/components/Certifications";
 import HireUs from "@/components/HireMe";
+import PricingCards from "@/components/Pricing";
 
 export default function Home() {
 	return (
@@ -11,9 +12,11 @@ export default function Home() {
 			<HeroSection />
 			<ServicesSection />
 			<TechStack />
-			<Testimonials />
+
 			<Certifications />
 			<HireUs />
+			<PricingCards />
+			<Testimonials />
 		</div>
 	);
 }
