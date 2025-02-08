@@ -90,7 +90,7 @@ const TechStack: React.FC = () => {
 	return (
 		<div className="bg-gray-100">
 			<div className="py-20 mx-auto px-6 lg:w-3/4 lg:mx-auto">
-				<h2 className="text-3xl font-bold text-blue-500 mb-8 text-center">
+				<h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
 					Techstack We Use
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 place-content-center">
@@ -99,12 +99,11 @@ const TechStack: React.FC = () => {
 							<h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
 								{skillGroup.category}
 							</h3>
-							<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-4 mb-11">
-                                
+							<div className="grid grid-cols-2 md:grid-cols-3 gap-y-4 mb-11 ">
 								{skillGroup.items.map((skill) => (
 									<div
 										key={skill.name}
-										className="w-24 h-24 flex flex-col items-center justify-center p-4 border border-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white">
+										className="w-24 h-24 flex flex-col items-center justify-center p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white">
 										{skill.icon}
 										<span className="mt-2 text-sm font-semibold text-gray-800 text-center">
 											{skill.name}
