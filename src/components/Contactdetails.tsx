@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const ContactPage = () => {
 	return (
-		<div className="bg-gray-100 min-h-screen py-16 px-6">
-			<div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+		<div className="bg-gray-100 min-h-screen py-10 px-4 md:px-6">
+			<div className="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
 				<h2 className="text-3xl font-bold text-center text-gray-900 mb-6">
 					Contact Us
 				</h2>
@@ -46,7 +46,7 @@ const ContactPage = () => {
 				</form>
 
 				{/* Team Details */}
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 					<div className="bg-white p-6 rounded-lg shadow-md">
 						<h3 className="text-xl font-semibold text-gray-900">
 							Harunath Eskuri

@@ -1,7 +1,9 @@
 import HeroSection from "@/components/HeroSection";
-import Footer from "@/components/Footer";
 import ServicesSection from "@/components/ServicesSection";
 import TechStack from "@/components/TechStack";
+import Testimonials from "@/components/Testimonials";
+import Certifications from "@/components/Certifications";
+import HireUs from "@/components/HireMe";
 
 export default function Home() {
 	return (
@@ -9,7 +11,9 @@ export default function Home() {
 			<HeroSection />
 			<ServicesSection />
 			<TechStack />
-			<Footer />
+			<Testimonials />
+			<Certifications />
+			<HireUs />
 		</div>
 	);
 }
