@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { DarkMode } from "./DarkMode";
+import Auth from "./Auth";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -57,11 +59,10 @@ export default function Navbar() {
 						</Link>
 					</li>
 					<li>
-						<Link
-							href="/login"
-							className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">
-							Login
-						</Link>
+						<Auth />
+					</li>
+					<li>
+						<DarkMode />
 					</li>
 				</ul>
 			</div>
