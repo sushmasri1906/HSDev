@@ -32,7 +32,25 @@ const Footer = () => {
 			</div>
 			<p className="mt-3 text-sm text-gray-400">
 				📞 +91 9133443441 <br />
-				📧 hsdev.team@gmail.com
+				📧 hsdev.original@gmail.com
+			</p>
+			<p className="mt-4 text-sm text-gray-400">
+				Developed by{" "}
+				<Link
+					href="https://sushmasri.netlify.app"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-400 hover:underline">
+					Sushmasri
+				</Link>{" "}
+				&{" "}
+				<Link
+					href="https://harunath.netlify.app"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="text-blue-400 hover:underline">
+					Harunath
+				</Link>
 			</p>
 		</footer>
 	);
