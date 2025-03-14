@@ -94,7 +94,7 @@ const TechStack: React.FC = () => {
 				<h2 className="text-3xl sm:text-4xl font-bold text-white">
 					Tech Stack We Use 🚀
 				</h2>
-				<p className="text-md sm:text-lg text-gray-400 mt-4">
+				<p className="text-md sm:text-lg text-white mt-4">
 					Our tech expertise to build powerful and modern web applications.
 				</p>
 
@@ -103,7 +103,7 @@ const TechStack: React.FC = () => {
 					{skills.map((skillGroup) => (
 						<div
 							key={skillGroup.category}
-							className="relative p-6  bg-[#1a1a1a] border-2 border-transparent animate-border-gradient">
+							className="relative p-6  border-2 border-transparent animate-border-gradient">
 							{/* Animated Outer Border */}
 							<div className="absolute inset-0  pointer-events-none animate-border-gradient"></div>
 

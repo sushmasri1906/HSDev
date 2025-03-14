@@ -66,7 +66,7 @@ const ServicesSection = () => {
 					className="text-3xl sm:text-4xl font-bold text-white">
 					Services We Offer 🚀
 				</motion.h2>
-				<p className="text-md sm:text-lg text-gray-400 mt-4">
+				<p className="text-md sm:text-lg text-white mt-4">
 					We provide expert development services to bring your ideas to life
 					with modern and scalable solutions.
 				</p>
@@ -79,7 +79,7 @@ const ServicesSection = () => {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ duration: 0.6, delay: index * 0.2 }}
-							className="relative p-6 rounded-2xl bg-[#1a1a1a] border-2 border-transparent animate-border-gradient">
+							className="relative p-6 ">
 							{/* Animated Outer Border */}
 							<div className="absolute inset-0  border-2 pointer-events-none animate-border-gradient"></div>
 

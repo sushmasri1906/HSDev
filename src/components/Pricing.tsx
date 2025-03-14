@@ -55,9 +55,7 @@ const PricingCards = () => {
 	return (
 		<section className="py-16 bg-[#0f0f0f] text-white">
 			<div className="max-w-6xl mx-auto text-center px-6">
-				<h2 className="text-4xl font-bold text-white">
-					Pricing Plans
-				</h2>
+				<h2 className="text-4xl font-bold text-white">Pricing Plans</h2>
 				<p className="mt-4 text-white">
 					Choose the best package for your **Next.js + Tailwind CSS** project.
 				</p>
@@ -74,7 +72,9 @@ const PricingCards = () => {
 						}}>
 						<div className="flex justify-center mb-4">{plan.icon}</div>
 						<h3 className="text-2xl font-semibold">{plan.name}</h3>
-						<p className="text-xl text-[#8A2BE2] font-bold mt-2">{plan.price}</p>
+						<p className="text-xl text-[#8A2BE2] font-bold mt-2">
+							{plan.price}
+						</p>
 						<p className="text-white mt-1">{plan.delivery}</p>
 						<p className="text-white">{plan.revisions}</p>
 						<p className="text-white">{plan.pages}</p>
@@ -84,7 +84,7 @@ const PricingCards = () => {
 								<li
 									key={index}
 									className="flex items-center justify-start gap-2">
-									<FaCheckCircle size={16}  className="text-green-400" />
+									<FaCheckCircle size={16} className="text-green-400" />
 									{feature}
 								</li>
 							))}
@@ -98,7 +98,7 @@ const PricingCards = () => {
 			</div>
 
 			{/* Offer Zone */}
-			<div className="mt-16 p-6 text-center rounded-xl max-w-4xl mx-auto border-2 border-[#8A2BE2] bg-opacity-10 bg-[#8A2BE2]">
+			<div className="mt-16 p-6 text-center rounded-xl max-w-4xl mx-auto border-2 border-[#8A2BE2] bg-opacity-30 bg-[#8A2BE2]">
 				<h3 className="text-2xl font-bold">🔥 Special Offer Zone 🔥</h3>
 				<p className="mt-2 text-white">
 					Save **up to 15%** on your first order!
