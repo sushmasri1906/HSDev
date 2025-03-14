@@ -17,7 +17,7 @@ const HeroSection = () => {
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
-						className="text-4xl font-bold text-[#4B0082] leading-tight">
+						className="text-4xl font-bold text-[rgb(138,43,226)] leading-tight">
 						We Craft Stunning Digital Experiences 🚀
 					</motion.h2>
 
