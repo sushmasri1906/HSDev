@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -42,7 +43,7 @@ export default function Navbar() {
 
 				{/* Desktop Menu */}
 				<ul className="hidden md:flex space-x-6 text-gray-300 font-medium">
-					{navLinks.map((item, index) => (
+					{navLinks.map((item) => (
 						<motion.li
 							key={item.href}
 							whileHover={{ scale: 1.1, color: "#8A2BE2" }}

@@ -45,8 +45,7 @@ const Certifications: React.FC = () => {
 							whileHover={{ scale: 1.05 }}
 							className="relative flex flex-col items-center text-center py-6 px-4 rounded-lg border-2 border-transparent transition-all duration-300"
 							style={{
-								borderImage:
-									"linear-gradient(135deg, #4B0082, #8A2BE2) 1", // Border with gradient
+								borderImage: "linear-gradient(135deg, #4B0082, #8A2BE2) 1", // Border with gradient
 							}}>
 							{/* Image */}
 							<Image

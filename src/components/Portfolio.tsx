@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { title } from "process";
 
 const projects = [
 	{
@@ -22,7 +21,6 @@ const projects = [
 		description:
 			"A responsive frontend for a coworking space platform featuring modern UI, workspace listings, and an intuitive design.",
 	},
-
 	{
 		title: "ElevateCreditScore",
 		category: "Business",
@@ -97,12 +95,16 @@ const projects = [
 	},
 	{
 		title: "Business Platform",
+		category: "Business",
+		image: "/hero.webp",
+		link: "#",
+		description: "A business platform with essential tools and solutions.",
 	},
 ];
 
 const Portfolio = () => {
 	return (
-		<div className="bg-gray-100 min-h-screen py-16 px-6">
+		<div className="bg-[#0F0F0F] min-h-screen py-16 px-6 text-white">
 			<div className="max-w-6xl text-4xl font-extrabold mx-auto text-center">
 				Celebrating Our Projects & Achievements
 			</div>
@@ -111,22 +113,33 @@ const Portfolio = () => {
 				{projects.map((project, index) => (
 					<div
 						key={index + "portfolio"}
-						className="bg-white bg-opacity-20 backdrop-blur-lg rounded-xl shadow-lg p-6 hover:scale-105 transition-transform cursor-pointer">
+						className="bg-[#1A1A1A] bg-opacity-80 backdrop-blur-lg rounded-xl shadow-lg p-6 hover:scale-105 transition-transform cursor-pointer border border-[#4B0082]">
 						<Link
 							href={project.link ?? "#"}
 							target="_blank"
 							rel="noopener noreferrer">
+							{/* Project Image */}
 							<Image
 								src={project.image ?? "/hero.webp"}
-								alt={project.title}
+								alt={project.title ?? "Untitled Project"}
 								width={400}
 								height={160}
-								className="w-full h-20 sm:h-40 object-cover rounded-lg"
+								className="w-full h-40 object-cover rounded-lg"
 							/>
-							<h2 className="text-2xl font-semibold  mt-4">{project.title}</h2>
-							<p className=" mt-2">{project.description}</p>
-							<span className="inline-block mt-4 px-4 py-2 bg-white bg-opacity-20 rounded text-sm ">
-								{project.category}
+
+							{/* Project Title */}
+							<h2 className="text-2xl font-semibold mt-4">
+								{project.title ?? "Untitled Project"}
+							</h2>
+
+							{/* Project Description */}
+							<p className="mt-2 text-gray-300">
+								{project.description ?? "No description available."}
+							</p>
+
+							{/* Project Category */}
+							<span className="inline-block mt-4 px-4 py-2 bg-[#4B0082] text-white rounded text-sm">
+								{project.category ?? "General"}
 							</span>
 						</Link>
 					</div>
