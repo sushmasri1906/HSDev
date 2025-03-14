@@ -74,7 +74,7 @@ const PricingCards = () => {
 						}}>
 						<div className="flex justify-center mb-4">{plan.icon}</div>
 						<h3 className="text-2xl font-semibold">{plan.name}</h3>
-						<p className="text-xl text-[#4B0082] font-bold mt-2">{plan.price}</p>
+						<p className="text-xl text-[#8A2BE2] font-bold mt-2">{plan.price}</p>
 						<p className="text-white mt-1">{plan.delivery}</p>
 						<p className="text-white">{plan.revisions}</p>
 						<p className="text-white">{plan.pages}</p>

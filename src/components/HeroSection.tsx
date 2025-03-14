@@ -17,16 +17,15 @@ const HeroSection = () => {
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
-						className="text-4xl font-extrabold text-[#8A2BE2] leading-tight">
+						className="text-4xl font-bold text-[#4B0082] leading-tight">
 						We Craft Stunning Digital Experiences 🚀
 					</motion.h2>
 
-					{/* Typewriter Effect */}
 					<motion.h3
 						initial={{ opacity: 0, y: -10 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
-						className="text-2xl font-semibold text-[#4B0082] mt-2">
+						className="text-2xl font-semibold text-[#8A2BE2] mt-2">
 						<Typewriter
 							words={[
 								"MERN Stack Developers",

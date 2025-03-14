@@ -10,7 +10,7 @@ const testimonials = [
 			"Rolanplast UI is sleek and intuitive. The tech stack choice is modern and well-optimized!",
 	},
 	{
-		name: "Rakesh ",
+		name: "Rakesh",
 		image:
 			"https://res.cloudinary.com/dq12dx327/image/upload/v1738996003/45_gzb5pz.jpg",
 		feedback:
@@ -27,27 +27,32 @@ const testimonials = [
 
 const Testimonials: React.FC = () => {
 	return (
-		<div className="bg-gray-100 py-16">
+		<div className="bg-[#0F0F0F] py-16 text-white">
 			<div className="mx-auto px-6 lg:w-3/4">
-				<h2 className="text-4xl font-extrabold text-gray-900 mb-8 text-center">
+				<h2 className="text-4xl font-bold text-white mb-8 text-center">
 					What People Say
 				</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 					{testimonials.map((testimonial, index) => (
 						<div
 							key={index}
-							className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+							className=" p-6 rounded-lg shadow-lg flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+							style={{
+								borderImage: "linear-gradient(135deg, #4B0082, #8A2BE2) 1",
+								borderWidth: "2px",
+								borderStyle: "solid",
+							}}>
 							<Image
 								src={testimonial.image}
 								alt={testimonial.name}
 								height={100}
 								width={100}
-								className="w-16 h-16 rounded-full border-2 border-gray-300 mb-4"
+								className="w-16 h-16 rounded-full border-2 border-[#8A2BE2] mb-4"
 							/>
-							<h3 className="text-lg font-semibold text-gray-900">
+							<h3 className="text-lg font-semibold text-white">
 								{testimonial.name}
 							</h3>
-							<p className="mt-3 text-gray-700 text-sm italic">
+							<p className="mt-3 text-gray-300 text-sm italic">
 								&quot;{testimonial.feedback}&quot;
 							</p>
 						</div>

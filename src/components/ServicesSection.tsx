@@ -63,7 +63,7 @@ const ServicesSection = () => {
 					initial={{ opacity: 0, y: -20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
-					className="text-3xl sm:text-4xl font-extrabold text-white">
+					className="text-3xl sm:text-4xl font-bold text-white">
 					Services We Offer 🚀
 				</motion.h2>
 				<p className="text-md sm:text-lg text-gray-400 mt-4">
@@ -81,7 +81,7 @@ const ServicesSection = () => {
 							transition={{ duration: 0.6, delay: index * 0.2 }}
 							className="relative p-6 rounded-2xl bg-[#1a1a1a] border-2 border-transparent animate-border-gradient">
 							{/* Animated Outer Border */}
-							<div className="absolute inset-0 rounded-2xl border-2 pointer-events-none animate-border-gradient"></div>
+							<div className="absolute inset-0  border-2 pointer-events-none animate-border-gradient"></div>
 
 							<div className="flex justify-center mb-4">{service.icon}</div>
 							<h3 className="text-lg sm:text-xl font-semibold text-white">

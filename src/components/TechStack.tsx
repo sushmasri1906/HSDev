@@ -91,7 +91,7 @@ const TechStack: React.FC = () => {
 	return (
 		<section className="bg-[#0f0f0f] py-16 px-4">
 			<div className="max-w-6xl mx-auto text-center">
-				<h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+				<h2 className="text-3xl sm:text-4xl font-bold text-white">
 					Tech Stack We Use 🚀
 				</h2>
 				<p className="text-md sm:text-lg text-gray-400 mt-4">
@@ -103,21 +103,21 @@ const TechStack: React.FC = () => {
 					{skills.map((skillGroup) => (
 						<div
 							key={skillGroup.category}
-							className="relative p-6 rounded-2xl bg-[#1a1a1a] border-2 border-transparent animate-border-gradient">
+							className="relative p-6  bg-[#1a1a1a] border-2 border-transparent animate-border-gradient">
 							{/* Animated Outer Border */}
-							<div className="absolute inset-0 rounded-2xl border-2 pointer-events-none animate-border-gradient"></div>
+							<div className="absolute inset-0  pointer-events-none animate-border-gradient"></div>
 
 							<h3 className="text-lg sm:text-xl font-semibold text-gray-200 mb-4 relative z-10">
 								{skillGroup.category}
 							</h3>
 
-							<div className="grid grid-cols-2 md:grid-cols-3 gap-4 relative z-10">
+							<div className="grid grid-cols-2 md:grid-cols-3 gap-4 content-center relative z-10">
 								{skillGroup.items.map((skill) => (
 									<div
 										key={skill.name}
-										className="w-20 sm:w-24 h-20 sm:h-24 flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg shadow-md bg-[#1a1a1a] transition-all duration-300 hover:scale-105">
+										className="h-20 sm:h-24 flex flex-col items-center justify-center p-3 sm:p-4 shadow-2xl border border-gray-50  transition-all duration-300 hover:scale-105">
 										{skill.icon}
-										<span className="mt-2 text-xs sm:text-sm font-semibold text-gray-300 text-center">
+										<span className="mt-2 text-xs sm:text-sm font-semibold text-gray-300 text-center ">
 											{skill.name}
 										</span>
 									</div>

@@ -2,85 +2,98 @@ import React from "react";
 
 const About = () => {
 	return (
-		<div className="bg-gray-100 min-h-screen py-16 px-6 flex justify-center">
-			<div className="max-w-5xl w-full  ">
-				<h1 className="text-5xl font-extrabold text-center  mb-10 drop-shadow-lg">
+		<div className="bg-[#0F0F0F] text-white min-h-screen py-16 px-6 flex justify-center">
+			<div className="max-w-4xl w-full space-y-12">
+				<h1 className="text-5xl font-bold text-center mb-8 ">
 					About Us
 				</h1>
 
-				{/* Sushmasri's Details */}
-				<div className="mb-10 p-6 bg-white bg-opacity-20 backdrop-blur-lg rounded-xl shadow-lg hover:scale-[1.03] transition-transform">
-					<h2 className="text-3xl font-bold ">Sushmasri Kamera</h2>
-					<p className="mt-4  leading-relaxed">
-						Enrolled in <strong>Entri Elevate</strong> as a
-						<strong>MERN stack developer</strong>, where I&apos;m building a
-						solid foundation in programming and problem-solving. My education is
-						equipping me with the technical knowledge and analytical skills
-						necessary to excel in the fast-paced world of software development.
-					</p>
-					<p className="mt-3  leading-relaxed">
-						With hands-on experience in freelancing, I&apos;ve worked on
-						projects like the <strong>Rolanaplast project</strong>, focusing on
-						real-time frontend development using <strong>Recoil</strong>. My
-						work spans both frontend and backend technologies, including
-						<strong>React, Express.js, and more</strong>.
-					</p>
-					<h3 className="text-2xl font-semibold  mt-6">
-						Internship Experience
-					</h3>
-					<ul className="list-disc list-inside mt-2 space-y-2 ">
-						<li>
-							Developed and maintained <strong>frontend features</strong> using
-							<strong>React.js & Tailwind CSS</strong>.
-						</li>
-						<li>
-							Implemented <strong>RESTful APIs</strong> using
-							<strong>Express.js & MongoDB</strong>.
-						</li>
-						<li>
-							Used <strong>Recoil</strong> for smoother state management and
-							user interactions.
-						</li>
-					</ul>
-					<h3 className="text-2xl font-semibold  mt-6">
-						Certifications & Awards
-					</h3>
-					<ul className="list-disc list-inside mt-2 space-y-2 ">
-						<li>
-							🏆
-							<strong>Entri Elevate Fullstack Development Certificate</strong>
-						</li>
-						<li>
-							🥇
-							<strong>
-								Winner of the Entri Elevate Independence Day Website Competition
-								(2024)
-							</strong>
-						</li>
-					</ul>
+				{/* Sushmasri's Section */}
+				<div className="p-6 hover:scale-[1.02] shadow-2xl border-[#4B0082] transition-transform duration-300 border-2 ">
+					<div className="p-5 ">
+						<h2 className="text-3xl font-bold text-white">
+							Sushmasri Kamera
+						</h2>
+						<p className="mt-3 leading-relaxed text-gray-300">
+							Currently enrolled in <strong>Entri Elevate</strong> as a{" "}
+							<strong>MERN Stack Developer</strong>, refining my skills in
+							software development and problem-solving.
+						</p>
+						<p className="mt-3 leading-relaxed text-gray-300">
+							As a freelancer, I&apos;ve worked on projects like{" "}
+							<strong>Rolanaplast</strong>, specializing in **frontend
+							development** with
+							<strong> Recoil, React, and Express.js</strong>.
+						</p>
+
+						<h3 className="text-2xl font-semibold text-[#8A2BE2] mt-6">
+							Internship Experience
+						</h3>
+						<ul className="mt-3 space-y-2 text-gray-300">
+							<li>
+								🚀 Built and maintained <strong>React.js</strong> interfaces
+								with <strong>Tailwind CSS</strong>.
+							</li>
+							<li>
+								🔗 Integrated <strong>RESTful APIs</strong> with Express.js &
+								MongoDB.
+							</li>
+							<li>
+								🎯 Used <strong>Recoil</strong> for efficient state management.
+							</li>
+						</ul>
+
+						<h3 className="text-2xl font-semibold text-[#8A2BE2] mt-6">
+							Certifications & Achievements
+						</h3>
+						<ul className="mt-3 space-y-2 text-gray-300">
+							<li>
+								🏆{" "}
+								<strong>
+									Entri Elevate Fullstack Development Certification
+								</strong>
+							</li>
+							<li>
+								🥇 Winner of{" "}
+								<strong>
+									Entri Elevate Independence Day Website Competition (2024)
+								</strong>
+							</li>
+						</ul>
+					</div>
 				</div>
 
-				{/* Harun's Details */}
-				<div className="p-6 bg-white bg-opacity-20 backdrop-blur-lg rounded-xl shadow-lg hover:scale-[1.03] transition-transform">
-					<h2 className="text-3xl font-bold ">Harunath Eskuri</h2>
-					<p className="mt-4  leading-relaxed">
-						I graduated in <strong>Computer Science</strong> from
-						<strong>Sreenidhi Institute of Science and Technology</strong>,
-						where I built a strong foundation in programming and
-						problem-solving.
-					</p>
-					<p className="mt-3  leading-relaxed">
-						With hands-on experience in <strong>full-stack development</strong>,
-						I&apos;ve worked on diverse projects including
-						<strong>UPI applications and eCommerce platforms</strong>. I
-						specialize in <strong>React, Next.js, Express.js,</strong> and more.
-					</p>
-					<h3 className="text-2xl font-semibold  mt-6">Certifications</h3>
-					<ul className="list-disc list-inside mt-2 space-y-2 ">
-						<li>
-							🏆 <strong>100x Dev Fullstack Development Certification</strong>
-						</li>
-					</ul>
+				{/* Harunath's Section */}
+				<div className="p-6  border-2 border-[#4B0082] shadow-2xl  ">
+					<div className="p-5 ">
+						<h2 className="text-3xl font-bold text-white">
+							Harunath Eskuri
+						</h2>
+						<p className="mt-3 leading-relaxed text-gray-300">
+							A graduate in <strong>Computer Science</strong> from
+							<strong> Sreenidhi Institute of Science and Technology</strong>,
+							with a strong foundation in software development and
+							problem-solving.
+						</p>
+						<p className="mt-3 leading-relaxed text-gray-300">
+							My experience includes working on **full-stack projects** like
+							<strong> UPI applications and eCommerce platforms</strong>. My
+							core expertise lies in
+							<strong>
+								{" "}
+								React, Next.js, Express.js, and scalable backend solutions.
+							</strong>
+						</p>
+
+						<h3 className="text-2xl font-semibold text-[#8A2BE2] mt-6">
+							Certifications
+						</h3>
+						<ul className="mt-3 space-y-2 text-gray-300">
+							<li>
+								🏆 <strong>100x Dev Fullstack Development Certification</strong>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
