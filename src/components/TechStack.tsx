@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import {
@@ -20,31 +21,31 @@ const skills = [
 	{
 		category: "Frontend",
 		items: [
-			{ name: "HTML", icon: <SiHtml5 size={40} className="text-orange-600" /> },
-			{ name: "CSS", icon: <SiCss3 size={40} className="text-blue-600" /> },
+			{ name: "HTML", icon: <SiHtml5 size={30} className="text-orange-500" /> },
+			{ name: "CSS", icon: <SiCss3 size={30} className="text-blue-500" /> },
 			{
 				name: "React.js",
-				icon: <FaReact size={40} className="text-blue-500" />,
+				icon: <FaReact size={30} className="text-cyan-400" />,
 			},
 			{
 				name: "Next.js",
-				icon: <SiNextdotjs size={40} className="text-black" />,
+				icon: <SiNextdotjs size={30} className="text-gray-300" />,
 			},
 			{
 				name: "Tailwind CSS",
-				icon: <SiTailwindcss size={40} className="text-teal-500" />,
+				icon: <SiTailwindcss size={30} className="text-teal-400" />,
 			},
 			{
 				name: "Bootstrap",
-				icon: <SiBootstrap size={40} className="text-purple-600" />,
+				icon: <SiBootstrap size={30} className="text-purple-500" />,
 			},
 			{
 				name: "Framer Motion",
-				icon: <SiFramer size={40} className="text-pink-500" />,
+				icon: <SiFramer size={30} className="text-pink-400" />,
 			},
 			{
 				name: "Recoil",
-				icon: <SiRecoil size={40} className="text-blue-400" />,
+				icon: <SiRecoil size={30} className="text-blue-400" />,
 			},
 		],
 	},
@@ -53,34 +54,34 @@ const skills = [
 		items: [
 			{
 				name: "Node.js",
-				icon: <FaNodeJs size={40} className="text-green-500" />,
+				icon: <FaNodeJs size={30} className="text-green-400" />,
 			},
 			{
 				name: "Express.js",
-				icon: <SiExpress size={40} className="text-gray-800" />,
+				icon: <SiExpress size={30} className="text-gray-300" />,
 			},
 			{
 				name: "MongoDB",
-				icon: <SiMongodb size={40} className="text-green-600" />,
+				icon: <SiMongodb size={30} className="text-green-500" />,
 			},
-			{ name: "Zod", icon: <SiZod size={40} className="text-blue-600" /> },
+			{ name: "Zod", icon: <SiZod size={30} className="text-blue-500" /> },
 		],
 	},
 	{
 		category: "Tools & Languages",
 		items: [
-			{ name: "Git", icon: <FaGitAlt size={40} className="text-orange-600" /> },
+			{ name: "Git", icon: <FaGitAlt size={30} className="text-orange-500" /> },
 			{
 				name: "Postman",
-				icon: <SiPostman size={40} className="text-orange-500" />,
+				icon: <SiPostman size={30} className="text-orange-400" />,
 			},
 			{
 				name: "JavaScript",
-				icon: <SiJavascript size={40} className="text-yellow-500" />,
+				icon: <SiJavascript size={30} className="text-yellow-400" />,
 			},
 			{
 				name: "TypeScript",
-				icon: <SiTypescript size={40} className="text-blue-500" />,
+				icon: <SiTypescript size={30} className="text-blue-400" />,
 			},
 		],
 	},
@@ -88,24 +89,35 @@ const skills = [
 
 const TechStack: React.FC = () => {
 	return (
-		<div className="bg-gray-100">
-			<div className="py-20 mx-auto px-6 lg:w-3/4 lg:mx-auto">
-				<h2 className="text-3xl font-extrabold text-gray-900 mb-8 text-center">
-					Techstack We Use
+		<section className="bg-[#0f0f0f] py-16 px-4">
+			<div className="max-w-6xl mx-auto text-center">
+				<h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+					Tech Stack We Use 🚀
 				</h2>
-				<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-content-center">
+				<p className="text-md sm:text-lg text-gray-400 mt-4">
+					Our tech expertise to build powerful and modern web applications.
+				</p>
+
+				{/* Tech Grid */}
+				<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 					{skills.map((skillGroup) => (
-						<div key={skillGroup.category} className="col-span-1">
-							<h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
+						<div
+							key={skillGroup.category}
+							className="relative p-6 rounded-2xl bg-[#1a1a1a] border-2 border-transparent animate-border-gradient">
+							{/* Animated Outer Border */}
+							<div className="absolute inset-0 rounded-2xl border-2 pointer-events-none animate-border-gradient"></div>
+
+							<h3 className="text-lg sm:text-xl font-semibold text-gray-200 mb-4 relative z-10">
 								{skillGroup.category}
 							</h3>
-							<div className="grid grid-cols-2  md:grid-cols-3 gap-y-4 mb-11  ">
+
+							<div className="grid grid-cols-2 md:grid-cols-3 gap-4 relative z-10">
 								{skillGroup.items.map((skill) => (
 									<div
 										key={skill.name}
-										className="w-24 h-24 flex flex-col items-center justify-center p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 bg-white">
+										className="w-20 sm:w-24 h-20 sm:h-24 flex flex-col items-center justify-center p-3 sm:p-4 rounded-lg shadow-md bg-[#1a1a1a] transition-all duration-300 hover:scale-105">
 										{skill.icon}
-										<span className="mt-2 text-sm font-semibold text-gray-800 text-center">
+										<span className="mt-2 text-xs sm:text-sm font-semibold text-gray-300 text-center">
 											{skill.name}
 										</span>
 									</div>
@@ -115,7 +127,25 @@ const TechStack: React.FC = () => {
 					))}
 				</div>
 			</div>
-		</div>
+
+			{/* Gradient Border Animation */}
+			<style jsx>{`
+				@keyframes borderAnimation {
+					0% {
+						border-color: #4b0082;
+					}
+					50% {
+						border-color: #8a2be2;
+					}
+					100% {
+						border-color: #4b0082;
+					}
+				}
+				.animate-border-gradient {
+					animation: borderAnimation 3s infinite alternate ease-in-out;
+				}
+			`}</style>
+		</section>
 	);
 };
 

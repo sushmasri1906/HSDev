@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { title } from "process";
 
 const projects = [
 	{
@@ -12,6 +13,16 @@ const projects = [
 		description:
 			"A social media platform inspired by Instagram, built using MERN stack & Firebase.",
 	},
+	{
+		title: "Jaaaga Coworking Space",
+		category: "Coworking",
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1741339318/Screenshot_2025-03-07_145105_p5nwh5.png",
+		link: "https://www.jaaaga.com/",
+		description:
+			"A responsive frontend for a coworking space platform featuring modern UI, workspace listings, and an intuitive design.",
+	},
+
 	{
 		title: "ElevateCreditScore",
 		category: "Business",
@@ -83,6 +94,9 @@ const projects = [
 		link: "https://hexaclothes.netlify.app/",
 		description:
 			"A fully functional e-commerce store with secure payments and dynamic product pages.",
+	},
+	{
+		title: "Business Platform",
 	},
 ];
 

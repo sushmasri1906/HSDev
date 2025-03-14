@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FaCheckCircle, FaStar, FaBolt } from "react-icons/fa";
 
@@ -15,7 +17,7 @@ const pricingPlans = [
 			"Source code - Basic",
 			"Attractive Landing Pages",
 		],
-		icon: <FaCheckCircle size={24} className="text-green-500" />,
+		icon: <FaCheckCircle size={24} className="text-green-400" />,
 	},
 	{
 		name: "Standard",
@@ -30,7 +32,7 @@ const pricingPlans = [
 			"Source code - Standard",
 			"Basic Backend if needed",
 		],
-		icon: <FaStar size={24} className="text-blue-500" />,
+		icon: <FaStar size={24} className="text-blue-400" />,
 	},
 	{
 		name: "Premium",
@@ -45,17 +47,19 @@ const pricingPlans = [
 			"Source code - Premium",
 			"Full-stack website",
 		],
-		icon: <FaBolt size={24} className="text-yellow-500" />,
+		icon: <FaBolt size={24} className="text-yellow-400" />,
 	},
 ];
 
 const PricingCards = () => {
 	return (
-		<div className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-12">
-			<div className="max-w-6xl mx-auto text-center">
-				<h2 className="text-3xl font-extrabold text-gray-900">Pricing Plans</h2>
-				<p className="mt-4 text-gray-600">
-					Choose the best package for your Next.js + Tailwind CSS project.
+		<section className="py-16 bg-[#0f0f0f] text-white">
+			<div className="max-w-6xl mx-auto text-center px-6">
+				<h2 className="text-4xl font-bold text-white">
+					Pricing Plans
+				</h2>
+				<p className="mt-4 text-white">
+					Choose the best package for your **Next.js + Tailwind CSS** project.
 				</p>
 			</div>
 
@@ -64,28 +68,29 @@ const PricingCards = () => {
 				{pricingPlans.map((plan) => (
 					<div
 						key={plan.name}
-						className="bg-white shadow-md rounded-xl p-6 text-center border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+						className="flex flex-col items-center text-center p-6 rounded-xl border-2 border-transparent transition-all duration-300"
+						style={{
+							borderImage: "linear-gradient(135deg, #4B0082, #8A2BE2) 1",
+						}}>
 						<div className="flex justify-center mb-4">{plan.icon}</div>
-						<h3 className="text-2xl font-semibold text-gray-900">
-							{plan.name}
-						</h3>
-						<p className="text-xl font-bold text-gray-800 mt-2">{plan.price}</p>
-						<p className="text-gray-600 mt-1">{plan.delivery}</p>
-						<p className="text-gray-600">{plan.revisions}</p>
-						<p className="text-gray-600">{plan.pages}</p>
+						<h3 className="text-2xl font-semibold">{plan.name}</h3>
+						<p className="text-xl text-[#4B0082] font-bold mt-2">{plan.price}</p>
+						<p className="text-white mt-1">{plan.delivery}</p>
+						<p className="text-white">{plan.revisions}</p>
+						<p className="text-white">{plan.pages}</p>
 
-						<ul className="mt-4 text-gray-600 space-y-2">
+						<ul className="mt-4 space-y-2 text-gray-300">
 							{plan.features.map((feature, index) => (
 								<li
 									key={index}
-									className="flex items-center justify-center gap-2">
-									<FaCheckCircle size={16} className="text-green-500" />
+									className="flex items-center justify-start gap-2">
+									<FaCheckCircle size={16}  className="text-green-400" />
 									{feature}
 								</li>
 							))}
 						</ul>
 
-						<button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+						<button className="mt-6 px-6 py-2 rounded-lg text-white bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] hover:opacity-80 transition">
 							Get Started
 						</button>
 					</div>
@@ -93,14 +98,16 @@ const PricingCards = () => {
 			</div>
 
 			{/* Offer Zone */}
-			<div className="mt-16 bg-yellow-100 text-yellow-800 p-6 text-center rounded-xl max-w-4xl mx-auto shadow-md">
+			<div className="mt-16 p-6 text-center rounded-xl max-w-4xl mx-auto border-2 border-[#8A2BE2] bg-opacity-10 bg-[#8A2BE2]">
 				<h3 className="text-2xl font-bold">🔥 Special Offer Zone 🔥</h3>
-				<p className="mt-2">**save up to 15%** on your first order!</p>
-				<button className="mt-4 bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition">
+				<p className="mt-2 text-white">
+					Save **up to 15%** on your first order!
+				</p>
+				<button className="mt-4 px-6 py-2 rounded-lg text-white bg-gradient-to-r from-[#4B0082] to-[#8A2BE2] hover:opacity-80 transition">
 					Claim Offer
 				</button>
 			</div>
-		</div>
+		</section>
 	);
 };
 
