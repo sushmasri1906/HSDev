@@ -7,6 +7,8 @@ import {
 	FaUserTie,
 	FaCreditCard,
 	FaServer,
+	FaComments,
+	FaCalendarAlt,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -52,6 +54,24 @@ const services = [
 		description:
 			"Secure and seamless payment gateway integration for online transactions and e-commerce platforms.",
 		icon: <FaCreditCard className="text-yellow-400 text-5xl" />,
+	},
+	{
+		title: "Admin Content Management",
+		description:
+			"Custom admin panels to easily manage content, images, blogs, and more using secure authentication and databases.",
+		icon: <FaUserTie className="text-cyan-400 text-5xl" />, // reused icon for style consistency
+	},
+	{
+		title: "Chat Applications",
+		description:
+			"Real-time chat solutions with WebSocket, Socket.io, and Firebase for seamless communication experiences.",
+		icon: <FaComments className="text-emerald-400 text-5xl" />,
+	},
+	{
+		title: "Booking Applications",
+		description:
+			"Powerful booking systems for events, appointments, or coworking spaces with calendar integrations.",
+		icon: <FaCalendarAlt className="text-indigo-400 text-5xl" />,
 	},
 ];
 
