@@ -6,7 +6,7 @@ import { FaCheckCircle, FaStar, FaBolt } from "react-icons/fa";
 const pricingPlans = [
 	{
 		name: "Basic",
-		price: "₹5,099",
+		price: "₹6,099",
 		delivery: "2-day delivery",
 		revisions: "1 Revision",
 		pages: "1 page",
