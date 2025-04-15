@@ -6,7 +6,7 @@ const testimonials = [
 	{
 		name: "Mahesh Devarakonda",
 		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744629276/sagar_lotbbv.jpg",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744695457/mahesh_vgalio.jpg",
 		feedback:
 			"The Rolanplast UI is beautifully crafted with smooth scroll animations using Framer Motion. The integration of Slick Carousel and Email.js adds great interactivity, and the multi-page structure with dynamic content upload makes the experience seamless and modern. The team responded promptly to all my requirements, providing quick solutions and ensuring smooth communication throughout the development process.",
 		status: "finished",
