@@ -5,15 +5,14 @@ import { FiExternalLink } from "react-icons/fi"; // External link icon
 const testimonials = [
 	{
 		name: "Mahesh Devarakonda",
-		image: "https://res.cloudinary.com/dgulr1hgd/image/upload/v1744695457/mahesh_vgalio.jpg",
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744695457/mahesh_vgalio.jpg",
 		feedback:
 			"I'm really happy with how the Rolanplast website turned out. The design is clean, smooth, and interactive. The team was quick to respond, made all the changes I asked for, and made the whole process easy and stress-free.",
 		status: "finished",
 		website: "Rolanplast",
 		url: "https://rolanplast.netlify.app/",
-	}
-	
-	
+	},
 
 	{
 		name: "Narayana Swami",
