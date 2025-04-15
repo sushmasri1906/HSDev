@@ -126,9 +126,26 @@ const projects = [
 		technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
 		github: "",
 	},
-
 	{
 		id: 8,
+		title: "WEN - Women Entrepreneurs Network",
+		category: "Community Platform",
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744710608/Screenshot_2025-04-15_151906_w836vq.png",
+		link: "https://www.bizwen.site/",
+		description:
+			"A vibrant and inclusive platform built to empower women entrepreneurs through networking, mentorship, knowledge sharing, and global visibility.",
+
+		technologies: [
+			"Next.js",
+			"Tailwind CSS",
+			"React Icons",
+			"Framer Motion",
+			"Responsive Design",
+		],
+	},
+	{
+		id: 9,
 		title: "RolanPlast Business Website",
 		category: "Business",
 		image:
@@ -146,7 +163,7 @@ const projects = [
 		github: "",
 	},
 	{
-		id: 9,
+		id: 10,
 		title: "Independence Day Theme Website",
 		category: "Patriotic",
 		image:
@@ -159,7 +176,7 @@ const projects = [
 	},
 
 	{
-		id: 10,
+		id: 11,
 		title: "E-commerce Store",
 		category: "E-commerce",
 		image:
