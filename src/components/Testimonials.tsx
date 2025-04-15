@@ -90,17 +90,6 @@ const Testimonials: React.FC = () => {
 					What People Say
 				</h2>
 
-				{ongoing.length > 0 && (
-					<>
-						<h3 className="text-2xl font-semibold mb-4 text-purple-400">
-							Ongoing Testimonials
-						</h3>
-						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
-							{renderTestimonials(ongoing)}
-						</div>
-					</>
-				)}
-
 				{finished.length > 0 && (
 					<>
 						<h3 className="text-2xl font-semibold mb-4 text-purple-400">
@@ -108,6 +97,17 @@ const Testimonials: React.FC = () => {
 						</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 							{renderTestimonials(finished)}
+						</div>
+					</>
+				)}
+
+				{ongoing.length > 0 && (
+					<>
+						<h3 className="text-2xl font-semibold mb-4 text-purple-400">
+							Ongoing Testimonials
+						</h3>
+						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+							{renderTestimonials(ongoing)}
 						</div>
 					</>
 				)}
