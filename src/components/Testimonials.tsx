@@ -11,7 +11,7 @@ const testimonials = [
 		status: "finished",
 		website: "Rolanplast",
 		url: "https://rolanplast.netlify.app/",
-	}
+	},
 	
 
 	{
