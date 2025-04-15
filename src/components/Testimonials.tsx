@@ -103,7 +103,7 @@ const Testimonials: React.FC = () => {
 
 				{ongoing.length > 0 && (
 					<>
-						<h3 className="text-2xl font-semibold mt-4 text-purple-400">
+						<h3 className="text-2xl font-semibold m-4 text-purple-400">
 							Ongoing Testimonials
 						</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
