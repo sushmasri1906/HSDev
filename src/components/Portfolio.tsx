@@ -47,7 +47,7 @@ const projects = [
 		github: "https://github.com/Harunath/GS060699_Harunath_Eskuri",
 	},
 	{
-		id: 8,
+		id: 3,
 		title: "Genie Bucks Money Management",
 		category: "Finance",
 		image:
@@ -67,7 +67,17 @@ const projects = [
 		],
 	},
 	{
-		id: 7,
+		id: 4,
+		title: "Biz-Network",
+		description:
+			"A powerful business-to-business networking platform enabling seamless connections and collaborations among professionals and organizations.",
+		technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS", "Recoil"],
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1742481482/Screenshot_2025-03-20_200747_g8lw3z.png",
+		link: "https://www.bizn.in/",
+	},
+	{
+		id: 5,
 		title: "Paytm Clone",
 		category: "Full-Stack",
 		image:
@@ -86,7 +96,7 @@ const projects = [
 		],
 	},
 	{
-		id: 3,
+		id: 6,
 		title: "HexVibe (Instagram Clone)",
 		category: "Full-Stack",
 		image:
@@ -105,7 +115,7 @@ const projects = [
 		github: "https://github.com/your-repo/hexvibe",
 	},
 	{
-		id: 4,
+		id: 7,
 		title: "Jaaaga Coworking Space",
 		category: "Coworking",
 		image:
@@ -116,9 +126,26 @@ const projects = [
 		technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
 		github: "",
 	},
-
 	{
-		id: 5,
+		id: 8,
+		title: "WEN - Women Entrepreneurs Network",
+		category: "Community Platform",
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744710608/Screenshot_2025-04-15_151906_w836vq.png",
+		link: "https://www.bizwen.site/",
+		description:
+			"A vibrant and inclusive platform built to empower women entrepreneurs through networking, mentorship, knowledge sharing, and global visibility.",
+
+		technologies: [
+			"Next.js",
+			"Tailwind CSS",
+			"React Icons",
+			"Framer Motion",
+			"Responsive Design",
+		],
+	},
+	{
+		id: 9,
 		title: "RolanPlast Business Website",
 		category: "Business",
 		image:
@@ -136,7 +163,7 @@ const projects = [
 		github: "",
 	},
 	{
-		id: 6,
+		id: 10,
 		title: "Independence Day Theme Website",
 		category: "Patriotic",
 		image:
@@ -149,7 +176,7 @@ const projects = [
 	},
 
 	{
-		id: 9,
+		id: 11,
 		title: "E-commerce Store",
 		category: "E-commerce",
 		image:

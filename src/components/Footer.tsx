@@ -48,7 +48,7 @@ const Footer = () => {
 			<p className="mt-6 text-sm text-gray-400">
 				Developed by{" "}
 				<Link
-					href="https://sushmasri.netlify.app"
+					href="https://sushmasri.vercel.app"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-[#8A2BE2] hover:underline">
@@ -56,7 +56,7 @@ const Footer = () => {
 				</Link>{" "}
 				&{" "}
 				<Link
-					href="https://harunath.netlify.app"
+					href="https://harunath.vercel.app"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="text-[#8A2BE2] hover:underline">
