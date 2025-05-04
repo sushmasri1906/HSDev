@@ -2,13 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const popupRef = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		function handleClickOutside(event: MouseEvent) {
+			if (
+				popupRef.current &&
+				!popupRef.current.contains(event.target as Node)
+			) {
+				setIsOpen(false);
+			}
+		}
 
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, []);
 	// Navbar links
 	const navLinks = [
 		{ href: "/", label: "Home" },
@@ -19,8 +34,8 @@ export default function Navbar() {
 	];
 
 	return (
-		<nav className="bg-[#0F0F0F] text-white shadow-md p-4 sticky top-0 z-50">
-			<div className="max-w-6xl mx-auto flex justify-between items-center">
+		<nav className="shadow-md p-4 sticky top-0 z-50 backdrop-blur-sm bg-black/20 rounded-xl">
+			<div className="mx-auto flex justify-between items-center">
 				{/* Logo */}
 				<h1 className="text-2xl font-bold">
 					<Link href="/">
@@ -69,11 +84,15 @@ export default function Navbar() {
 			<AnimatePresence>
 				{isOpen && (
 					<motion.div
-						initial={{ opacity: 0, y: -20 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -20 }}
+						ref={popupRef}
+						initial={{ height: 0 }}
+						animate={{ height: 352 }}
+						exit={{
+							height: 0,
+							transition: { duration: 0.3 },
+						}}
 						transition={{ duration: 0.3 }}
-						className="md:hidden absolute top-16 left-0 w-full bg-[#1A1A1A] shadow-lg rounded-b-lg">
+						className="md:hidden absolute top-16 left-0 w-full bg-black shadow-lg rounded-b-lg overflow-hidden">
 						<ul className="flex flex-col space-y-4 p-4 text-gray-300">
 							{navLinks.map((item) => (
 								<motion.li
