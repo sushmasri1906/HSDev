@@ -34,7 +34,7 @@ export default function Navbar() {
 	];
 
 	return (
-		<nav className="shadow-md p-4 sticky top-0 z-50 backdrop-blur">
+		<nav className="shadow-md p-4 sticky top-0 z-50 backdrop-blur-sm bg-black/20 rounded-xl">
 			<div className="mx-auto flex justify-between items-center">
 				{/* Logo */}
 				<h1 className="text-2xl font-bold">
@@ -92,7 +92,7 @@ export default function Navbar() {
 							transition: { duration: 0.3 },
 						}}
 						transition={{ duration: 0.3 }}
-						className="md:hidden absolute top-16 left-0 w-full bg-[#1A1A1A] shadow-lg rounded-b-lg overflow-hidden">
+						className="md:hidden absolute top-16 left-0 w-full bg-black shadow-lg rounded-b-lg overflow-hidden">
 						<ul className="flex flex-col space-y-4 p-4 text-gray-300">
 							{navLinks.map((item) => (
 								<motion.li
