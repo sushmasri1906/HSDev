@@ -23,7 +23,7 @@ const certifications = [
 
 const Certifications: React.FC = () => {
 	return (
-		<section className="py-16 bg-[#0f0f0f] text-white">
+		<section>
 			<div className="mx-auto px-6 lg:w-3/4">
 				{/* Title with Animation */}
 				<motion.h2

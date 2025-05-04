@@ -4,14 +4,15 @@ import Link from "next/link";
 
 const ContactPage = () => {
 	return (
-		<div className="bg-[#0F0F0F] text-white min-h-screen py-12 px-4 md:px-6 flex justify-center">
-			<div className="max-w-4xl w-full">
+		<div className="min-h-screen py-12 px-4 md:px-6 flex justify-center">
+			<div className="w-full">
 				<h2 className="text-4xl font-bold text-center text-white mb-10 drop-shadow-md">
 					Contact Us
 				</h2>
 
 				{/* Contact Form */}
-				<div className="p-6 md:p-8  shadow-lg 
+				<div
+					className="p-6 md:p-8  shadow-lg 
                     border-[3px] border-[#4B0082] ">
 					<form className="space-y-6">
 						<div>
@@ -33,7 +34,9 @@ const ContactPage = () => {
 							/>
 						</div>
 						<div>
-							<label className="block text-gray-300 font-semibold">Message</label>
+							<label className="block text-gray-300 font-semibold">
+								Message
+							</label>
 							<textarea
 								className="w-full p-3 bg-transparent border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8A2BE2] transition"
 								rows={5}
@@ -52,7 +55,9 @@ const ContactPage = () => {
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
 					{/* Harunath */}
 					<div className="p-6   border-[3px] border-[#4B0082] ">
-						<h3 className="text-2xl font-bold text-[#8A2BE2]">Harunath Eskuri</h3>
+						<h3 className="text-2xl font-bold text-[#8A2BE2]">
+							Harunath Eskuri
+						</h3>
 						<p className="text-gray-300">Fullstack Developer</p>
 						<div className="flex justify-center gap-6 mt-4">
 							<Link
@@ -78,7 +83,9 @@ const ContactPage = () => {
 
 					{/* Sushmasri */}
 					<div className="p-6  shadow-2xl border-[3px] border-[#4B0082] ">
-						<h3 className="text-2xl font-bold text-[#8A2BE2]">Sushmasri Kamera</h3>
+						<h3 className="text-2xl font-bold text-[#8A2BE2]">
+							Sushmasri Kamera
+						</h3>
 						<p className="text-gray-300">Fullstack Developer</p>
 						<div className="flex justify-center gap-6 mt-4">
 							<Link
