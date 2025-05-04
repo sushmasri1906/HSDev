@@ -45,10 +45,11 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<Navbar />
-
-				{children}
-				<Footer />
+				<div className="bg-[#0F0F0F] text-white px-4 sm:px-8 md:px-12 lg:px-16">
+					<Navbar />
+					{children}
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);

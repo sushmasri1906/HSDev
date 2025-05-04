@@ -6,12 +6,10 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HireUs: React.FC = () => {
 	return (
-		<section className="py-16 bg-[#0f0f0f] text-white">
+		<section className="py-16">
 			<div className="mx-auto px-6 lg:w-3/4 text-center">
 				{/* Title */}
-				<h2 className="text-4xl font-bold text-white mb-6">
-					Hire Us
-				</h2>
+				<h2 className="text-4xl font-bold text-white mb-6">Hire Us</h2>
 				<p className="text-lg text-gray-300 max-w-2xl mx-auto">
 					🚀 We are passionate Fullstack Developers skilled in{" "}
 					<span className="text-[#8A2BE2]">
