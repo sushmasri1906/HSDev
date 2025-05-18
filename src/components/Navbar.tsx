@@ -5,10 +5,12 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	const popupRef = useRef<HTMLDivElement>(null);
+	const pathname = usePathname();
 	useEffect(() => {
 		function handleClickOutside(event: MouseEvent) {
 			if (
@@ -29,7 +31,7 @@ export default function Navbar() {
 		{ href: "/", label: "Home" },
 		{ href: "/about", label: "About" },
 		{ href: "/services", label: "Services" },
-		{ href: "/portfolio", label: "Portfolio" },
+		{ href: "/projects", label: "Projects" },
 		{ href: "/contact", label: "Contact" },
 	];
 
@@ -61,11 +63,17 @@ export default function Navbar() {
 					{navLinks.map((item) => (
 						<motion.li
 							key={item.href}
-							whileHover={{ scale: 1.1, color: "#8A2BE2" }}
-							transition={{ type: "spring", stiffness: 300 }}>
+							whileHover={{ scale: 1.1, color: "#4B0082" }}
+							transition={{ duration: 0.1 }}>
 							<Link
 								href={item.href}
-								className="hover:text-[#8A2BE2] transition duration-300">
+								className={`${
+									pathname === item.href
+										? "text-[#8551ff] underline underline-offset-4"
+										: ""
+								}+
+										  "hover:text-[#8A2BE2] hover:font-medium hover:underline underline-offset-4 transition duration-100"
+								`}>
 								{item.label}
 							</Link>
 						</motion.li>
@@ -73,7 +81,7 @@ export default function Navbar() {
 					<motion.li whileHover={{ scale: 1.1 }}>
 						<Link
 							href="/login"
-							className="bg-[#8A2BE2] text-white px-4 py-2 rounded-md hover:bg-[#4B0082] transition">
+							className="bg-[#8551ff] text-white px-4 py-2 rounded-md hover:bg-[#8A2BE2] transition">
 							Login
 						</Link>
 					</motion.li>
@@ -98,11 +106,14 @@ export default function Navbar() {
 								<motion.li
 									key={item.href}
 									whileHover={{ scale: 1.1, color: "#8A2BE2" }}
-									transition={{ type: "spring", stiffness: 300 }}>
+									transition={{ duration: 0.1 }}>
 									<Link
 										href={item.href}
 										onClick={() => setIsOpen(false)}
-										className="block py-2 text-center hover:text-[#8A2BE2] transition">
+										className={`
+											${pathname === item.href ? "text-[#8551ff] underline underline-offset-4" : ""} +
+												  "w-full text-center block py-2  hover:text-[#4B0082] transition"
+										`}>
 										{item.label}
 									</Link>
 								</motion.li>
