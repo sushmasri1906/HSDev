@@ -141,7 +141,7 @@ const projects = [
 	},
 ];
 
-const Portfolio = () => {
+const Projects = () => {
 	return (
 		<section className="bg-[#0d0d0d] text-white py-16 px-6">
 			<div className="max-w-6xl mx-auto text-center">
@@ -211,4 +211,4 @@ const Portfolio = () => {
 	);
 };
 
-export default Portfolio;
+export default Projects;
