@@ -1,10 +1,10 @@
-import Portfolio from "@/components/Portfolio";
+import Projects from "@/components/Projects";
 import React from "react";
 
 function page() {
 	return (
 		<>
-			<Portfolio />
+			<Projects />
 		</>
 	);
 }

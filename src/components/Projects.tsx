@@ -9,46 +9,34 @@ import InViewUp from "./animations/InViewUp";
 
 const projects = [
 	{
-		id: 1,
-		title: "Dev-Learners Platform",
-		category: "LMS / E-Learning",
+		title: "Jaaaga Coworking Space",
+		category: "Coworking",
 		image:
-			"https://res.cloudinary.com/degrggosz/image/upload/v1739544745/Screenshot_2025-02-14_202024_wp6y6k.png",
-		link: "https://dev-learners.vercel.app/",
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1741339318/Screenshot_2025-03-07_145105_p5nwh5.png",
+		link: "https://www.jaaaga.com/",
 		description:
-			"A comprehensive LMS built with Next.js, featuring secure authentication, dynamic state management, and optimized media handling.",
+			"A responsive frontend for a coworking space platform featuring modern UI, workspace listings, and an intuitive design.",
+		technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
+		github: "",
+	},
+	{
+		title: "WEN - Women Entrepreneurs Network",
+		category: "Community Platform",
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744710608/Screenshot_2025-04-15_151906_w836vq.png",
+		link: "https://www.bizwen.site/",
+		description:
+			"A vibrant and inclusive platform built to empower women entrepreneurs through networking, mentorship, knowledge sharing, and global visibility.",
+
 		technologies: [
 			"Next.js",
-			"Next-Auth",
 			"Tailwind CSS",
-			"PostgreSQL",
-			"Prisma",
-			"Recoil",
-			"Cloudinary",
+			"React Icons",
+			"Framer Motion",
+			"Responsive Design",
 		],
-		github: "https://github.com/Harunath/dev-learner",
 	},
 	{
-		id: 2,
-		title: "Data Viewer App",
-		category: "PWA / Data Visualization",
-		image:
-			"https://res.cloudinary.com/degrggosz/image/upload/v1742408726/Screenshot_2025-03-19_235357_xh88d6.png",
-		link: "https://data-viewer-app66.vercel.app/login", // Replace with actual URL if available
-		description:
-			"A MERN stack desktop PWA for secure and efficient data visualization with advanced analytics.",
-		technologies: [
-			"MERN",
-			"Prisma",
-			"PostgreSQL",
-			"Recharts",
-			"AG Charts",
-			"Turbo Repo",
-		],
-		github: "https://github.com/Harunath/GS060699_Harunath_Eskuri",
-	},
-	{
-		id: 3,
 		title: "Genie Bucks Money Management",
 		category: "Finance",
 		image:
@@ -68,7 +56,6 @@ const projects = [
 		],
 	},
 	{
-		id: 4,
 		title: "Biz-Network",
 		description:
 			"A powerful business-to-business networking platform enabling seamless connections and collaborations among professionals and organizations.",
@@ -78,26 +65,24 @@ const projects = [
 		link: "https://www.bizn.in/",
 	},
 	{
-		id: 5,
-		title: "Paytm Clone",
-		category: "Full-Stack",
+		title: "Data Viewer App",
+		category: "PWA / Data Visualization",
 		image:
-			"https://res.cloudinary.com/dq12dx327/image/upload/v1739011463/Screenshot_2025-02-08_155933_gj5wbc.png",
-		link: "https://simpleupi.vercel.app/",
+			"https://res.cloudinary.com/degrggosz/image/upload/v1742408726/Screenshot_2025-03-19_235357_xh88d6.png",
+		link: "https://data-viewer-app66.vercel.app", // Replace with actual URL if available
 		description:
-			"A fintech app similar to Paytm, featuring payments, wallet, and transactions.",
-		github: "https://github.com/Harunath/simpleUPI",
+			"A MERN stack desktop PWA for secure and efficient data visualization with advanced analytics.",
 		technologies: [
-			"Next.js",
+			"MERN",
+			"Prisma",
 			"PostgreSQL",
-			"Prisma ORM",
-			"JWT Authentication",
+			"Recharts",
+			"AG Charts",
 			"Turbo Repo",
-			"Tailwind CSS",
 		],
+		github: "https://github.com/Harunath/GS060699_Harunath_Eskuri",
 	},
 	{
-		id: 6,
 		title: "HexVibe (Instagram Clone)",
 		category: "Full-Stack",
 		image:
@@ -116,37 +101,6 @@ const projects = [
 		github: "https://github.com/your-repo/hexvibe",
 	},
 	{
-		id: 7,
-		title: "Jaaaga Coworking Space",
-		category: "Coworking",
-		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1741339318/Screenshot_2025-03-07_145105_p5nwh5.png",
-		link: "https://www.jaaaga.com/",
-		description:
-			"A responsive frontend for a coworking space platform featuring modern UI, workspace listings, and an intuitive design.",
-		technologies: ["Next.js", "Tailwind CSS", "Framer Motion", "Typescript"],
-		github: "",
-	},
-	{
-		id: 8,
-		title: "WEN - Women Entrepreneurs Network",
-		category: "Community Platform",
-		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744710608/Screenshot_2025-04-15_151906_w836vq.png",
-		link: "https://www.bizwen.site/",
-		description:
-			"A vibrant and inclusive platform built to empower women entrepreneurs through networking, mentorship, knowledge sharing, and global visibility.",
-
-		technologies: [
-			"Next.js",
-			"Tailwind CSS",
-			"React Icons",
-			"Framer Motion",
-			"Responsive Design",
-		],
-	},
-	{
-		id: 9,
 		title: "RolanPlast Business Website",
 		category: "Business",
 		image:
@@ -164,7 +118,6 @@ const projects = [
 		github: "",
 	},
 	{
-		id: 10,
 		title: "Independence Day Theme Website",
 		category: "Patriotic",
 		image:
@@ -177,7 +130,6 @@ const projects = [
 	},
 
 	{
-		id: 11,
 		title: "E-commerce Store",
 		category: "E-commerce",
 		image:
@@ -190,7 +142,7 @@ const projects = [
 	},
 ];
 
-const Portfolio = () => {
+const Projects = () => {
 	return (
 		<section className="bg-[#0d0d0d] text-white py-16 px-6">
 			<div className="max-w-6xl mx-auto text-center">
@@ -203,9 +155,9 @@ const Portfolio = () => {
 				</p>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-					{projects?.map((project) => (
+					{projects?.map((project, index) => (
 						<motion.div
-							key={project.id}
+							key={index}
 							className="relative border border-purple-600 rounded-2xl p-4 flex flex-col transition-transform duration-300 hover:scale-105"
 							whileHover={{ scale: 1.05 }}>
 							<InViewUp>
@@ -262,4 +214,4 @@ const Portfolio = () => {
 	);
 };
 
-export default Portfolio;
+export default Projects;
