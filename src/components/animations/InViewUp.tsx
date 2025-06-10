@@ -1,20 +1,15 @@
 "use client";
-import { motion, useAnimation, useInView } from "framer-motion";
-import React, { ReactNode, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import React, { ReactNode, useRef } from "react";
 
 const InViewUp = ({ children }: { children: ReactNode }) => {
 	const ref = useRef(null);
-	const inView = useInView(ref, { once: true });
 	const varients = {
 		initial: {
-			y: 10,
-			x: 10,
-			opactity: 0.5,
+			opactity: 0,
 			scale: 0.9,
 		},
-		animate: {
-			y: 0,
-			x: 0,
+		whileInView: {
 			opactity: 1,
 			scale: 1,
 			transition: {
@@ -23,18 +18,14 @@ const InViewUp = ({ children }: { children: ReactNode }) => {
 			},
 		},
 	};
-	const mainControls = useAnimation();
-	useEffect(() => {
-		if (inView) {
-			mainControls.start("animate");
-		}
-	}, [inView]);
+
 	return (
 		<motion.div
 			ref={ref}
 			variants={varients}
 			initial="initial"
-			animate={mainControls}
+			whileInView={"whileInView"}
+			viewport={{ once: true, amount: 0.1 }}
 			className="h-full w-full">
 			{children}
 		</motion.div>
