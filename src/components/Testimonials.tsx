@@ -5,6 +5,17 @@ import InViewUp from "./animations/InViewUp";
 
 const testimonials = [
 	{
+	name: "Narayana Swami",
+	image:
+		"https://res.cloudinary.com/dsq4uyqbb/image/upload/v1741327062/n_f2djcv.jpg",
+	feedback:
+		"The Biz-Network® Timer has been a game-changer for our chapter meetings. It keeps the sessions sharp and perfectly timed, and the interface is clean, responsive, and simple to use. It’s a must-have tool for any organized networking event.",
+	status: "finished",
+	website: "Biz-Network® India",
+	url: "https://www.biztimer.site/",
+},
+
+	{
 		name: "Mahesh Devarakonda",
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744695457/mahesh_vgalio.jpg",

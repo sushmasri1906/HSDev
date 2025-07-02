@@ -9,6 +9,17 @@ import InViewUp from "./animations/InViewUp";
 
 const projects = [
 	{
+		title: "BizNetwork Timer",
+		category: "Productivity",
+		image:
+			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1747998268/Screenshot_2025-05-23_163334_vua8vh.png",
+		link: "https://www.biztimer.site/",
+		description:
+			"A clean and responsive timer app built for business networking sessions, featuring preset durations and a streamlined interface.",
+		technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
+	},
+
+	{
 		title: "Jaaaga Coworking Space",
 		category: "Coworking",
 		image:
