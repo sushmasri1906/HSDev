@@ -7,7 +7,7 @@ const InViewUp = ({ children }: { children: ReactNode }) => {
 	const varients = {
 		initial: {
 			opactity: 0,
-			scale: 0.9,
+			scale: 0.8,
 		},
 		whileInView: {
 			opactity: 1,
@@ -25,7 +25,7 @@ const InViewUp = ({ children }: { children: ReactNode }) => {
 			variants={varients}
 			initial="initial"
 			whileInView={"whileInView"}
-			viewport={{ once: true, amount: 0.1 }}
+			viewport={{ once: true }}
 			className="h-full w-full">
 			{children}
 		</motion.div>

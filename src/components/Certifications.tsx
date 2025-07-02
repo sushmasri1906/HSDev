@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import InViewUp from "./animations/InViewUp";
 
 const certifications = [
 	{
@@ -26,13 +27,15 @@ const Certifications: React.FC = () => {
 		<section>
 			<div className="mx-auto px-6 lg:w-3/4">
 				{/* Title with Animation */}
-				<motion.h2
-					initial={{ opacity: 0, y: -20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-					className="text-4xl font-bold text-white mb-10 text-center">
-					Certifications
-				</motion.h2>
+				<InViewUp>
+					<motion.h2
+						initial={{ opacity: 0, y: -20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						className="text-4xl font-bold text-white mb-10 text-center">
+						Certifications
+					</motion.h2>
+				</InViewUp>
 
 				{/* Certifications Grid */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -47,19 +50,21 @@ const Certifications: React.FC = () => {
 							style={{
 								borderImage: "linear-gradient(135deg, #4B0082, #8A2BE2) 1", // Border with gradient
 							}}>
-							{/* Image */}
-							<Image
-								src={cert.image}
-								alt={cert.title}
-								width={400}
-								height={250}
-								className="rounded-lg"
-							/>
-							<h3 className="text-lg font-semibold text-white mt-4">
-								{cert.title}
-							</h3>
-							<p className="text-sm text-gray-400">{cert.issuer}</p>
-							<p className="mt-2 text-gray-300 text-sm">{cert.date}</p>
+							<InViewUp>
+								{/* Image */}
+								<Image
+									src={cert.image}
+									alt={cert.title}
+									width={400}
+									height={250}
+									className="rounded-lg"
+								/>
+								<h3 className="text-lg font-semibold text-white mt-4">
+									{cert.title}
+								</h3>
+								<p className="text-sm text-gray-400">{cert.issuer}</p>
+								<p className="mt-2 text-gray-300 text-sm">{cert.date}</p>
+							</InViewUp>
 						</motion.div>
 					))}
 				</div>

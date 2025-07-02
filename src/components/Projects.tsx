@@ -146,9 +146,11 @@ const Projects = () => {
 	return (
 		<section className="bg-[#0d0d0d] text-white py-16 px-6">
 			<div className="max-w-6xl mx-auto text-center">
-				<h2 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 text-transparent bg-clip-text mb-4">
-					Projects
-				</h2>
+				<InViewUp>
+					<h2 className="text-4xl font-extrabold  bg-clip-text mb-4">
+						Projects
+					</h2>
+				</InViewUp>
 				<p className="text-gray-400 text-lg mb-12">
 					I have worked on a wide range of projects, focusing on frontend and
 					backend development. Here are some highlights.
@@ -158,19 +160,24 @@ const Projects = () => {
 					{projects?.map((project, index) => (
 						<motion.div
 							key={index}
-							className="relative border border-purple-600 rounded-2xl p-4 flex flex-col transition-transform duration-300 hover:scale-105"
-							whileHover={{ scale: 1.05 }}>
+							className="relative border border-purple-600 rounded-2xl flex flex-col"
+							whileHover={{
+								filter: "drop-shadow(0px 0px 0px #c084fc)",
+								transition: { duration: 0.3 },
+							}}>
 							<InViewUp>
-								<div className="overflow-hidden">
-									<Image
-										src={project.image}
-										alt={project.title}
-										width={500}
-										height={400}
-										className="w-full h-[173px] border border-white rounded-2xl p-1 object-cover"
-									/>
-								</div>
-								<div className="mt-4 flex items-center space-x-2">
+								<Link href={project.link ?? "#"}>
+									<div className="overflow-hidden">
+										<Image
+											src={project.image}
+											alt={project.title}
+											width={500}
+											height={400}
+											className="w-full h-[173px] rounded-t-2xl p-1 object-cover"
+										/>
+									</div>
+								</Link>
+								<div className="mt-4 flex items-center space-x-2 p-4">
 									<Link
 										href={project.link ?? "#"}
 										target="_blank"
@@ -189,21 +196,27 @@ const Projects = () => {
 									)}
 								</div>
 
-								<h3 className="text-xl text-center font-semibold mt-4">
-									{project.title}
-								</h3>
-								<p className="text-gray-400 text-sm mt-2">
-									{project.description}
-								</p>
+								<div className="p-2">
+									<motion.h3
+										animate={{
+											filter: "drop-shadow(2px 4px 1px #1129ff)",
+										}}
+										className="text-xl text-center font-semibold mt-4">
+										{project.title}
+									</motion.h3>
+									<p className="text-gray-400 text-sm mt-2">
+										{project.description}
+									</p>
 
-								<div className="flex flex-wrap gap-2 mt-4">
-									{project.technologies?.map((tech, index) => (
-										<span
-											key={index}
-											className="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full">
-											{tech}
-										</span>
-									))}
+									<div className="flex flex-wrap gap-2 mt-4">
+										{project.technologies?.map((tech, index) => (
+											<span
+												key={index}
+												className="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-full">
+												{tech}
+											</span>
+										))}
+									</div>
 								</div>
 							</InViewUp>
 						</motion.div>

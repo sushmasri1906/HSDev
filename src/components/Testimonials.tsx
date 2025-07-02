@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FiExternalLink } from "react-icons/fi"; // External link icon
+import InViewUp from "./animations/InViewUp";
 
 const testimonials = [
 	{
@@ -86,30 +87,32 @@ const Testimonials: React.FC = () => {
 	return (
 		<div className="bg-[#0F0F0F] py-16 text-white">
 			<div className="mx-auto px-6 lg:w-3/4">
-				<h2 className="text-4xl font-bold text-white mb-8 text-center">
-					What People Say
-				</h2>
+				<InViewUp>
+					<h2 className="text-4xl font-bold text-white mb-8 text-center">
+						What People Say
+					</h2>
+				</InViewUp>
 
 				{finished.length > 0 && (
-					<>
+					<InViewUp>
 						<h3 className="text-2xl font-semibold mb-4 text-purple-400">
 							Finished Testimonials
 						</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 							{renderTestimonials(finished)}
 						</div>
-					</>
+					</InViewUp>
 				)}
 
 				{ongoing.length > 0 && (
-					<>
+					<InViewUp>
 						<h3 className="text-2xl font-semibold m-4 text-purple-400">
 							Ongoing Testimonials
 						</h3>
 						<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
 							{renderTestimonials(ongoing)}
 						</div>
-					</>
+					</InViewUp>
 				)}
 			</div>
 		</div>

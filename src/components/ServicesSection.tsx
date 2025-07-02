@@ -1,7 +1,7 @@
 "use client";
 import {
 	FaCode,
-	FaPaintBrush,
+	// FaPaintBrush,
 	FaShoppingCart,
 	FaBriefcase,
 	FaUserTie,
@@ -44,12 +44,12 @@ const services = [
 			"Showcase your work with a beautifully designed and responsive portfolio website tailored to your style.",
 		icon: <FaUserTie className="text-red-400 text-5xl" />,
 	},
-	{
-		title: "Logos & Branding",
-		description:
-			"Custom logo designs and branding to create a unique and recognizable identity for your business.",
-		icon: <FaPaintBrush className="text-pink-400 text-5xl" />,
-	},
+	// {
+	// 	title: "Logos & Branding",
+	// 	description:
+	// 		"Custom logo designs and branding to create a unique and recognizable identity for your business.",
+	// 	icon: <FaPaintBrush className="text-pink-400 text-5xl" />,
+	// },
 	{
 		title: "Payment Gateway Integration",
 		description:
@@ -57,7 +57,7 @@ const services = [
 		icon: <FaCreditCard className="text-yellow-400 text-5xl" />,
 	},
 	{
-		title: "Admin Content Management",
+		title: "Content Management System (CMS)",
 		description:
 			"Custom admin panels to easily manage content, images, blogs, and more using secure authentication and databases.",
 		icon: <FaUserTie className="text-cyan-400 text-5xl" />, // reused icon for style consistency
@@ -105,11 +105,11 @@ const ServicesSection = () => {
 									transition: { duration: 0.6 },
 								}}
 								whileHover={{
-									backgroundColor: "rgb(138, 43, 226)",
+									backgroundColor: "rgb(138, 43, 226, 0.1)",
 									transition: { duration: 0.2 },
 								}}
 								viewport={{ once: true }}
-								className="relative p-6 shadow-sm shadow-[rgb(138,43,226)]">
+								className="relative p-6 shadow-sm shadow-[rgb(138,43,226)] rounded-2xl">
 								{/* Animated Outer Border */}
 								{/* <div className="absolute inset-0   "></div> */}
 

@@ -16,6 +16,7 @@ import {
 	SiPostman,
 	SiZod,
 } from "react-icons/si";
+import InViewUp from "./animations/InViewUp";
 
 const skills = [
 	{
@@ -91,13 +92,14 @@ const TechStack: React.FC = () => {
 	return (
 		<section className="bg-[#0f0f0f] py-16 px-4">
 			<div className="max-w-6xl mx-auto text-center">
-				<h2 className="text-3xl sm:text-4xl font-bold text-white">
-					Tech Stack We Use 🚀
-				</h2>
-				<p className="text-md sm:text-lg text-white mt-4">
-					Our tech expertise to build powerful and modern web applications.
-				</p>
-
+				<InViewUp>
+					<h2 className="text-3xl sm:text-4xl font-bold text-white">
+						Tech Stack We Use 🚀
+					</h2>
+					<p className="text-md sm:text-lg text-white mt-4">
+						Our tech expertise to build powerful and modern web applications.
+					</p>
+				</InViewUp>
 				{/* Tech Grid */}
 				<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 					{skills.map((skillGroup) => (
@@ -105,24 +107,26 @@ const TechStack: React.FC = () => {
 							key={skillGroup.category}
 							className="relative p-6  border-2 border-transparent animate-border-gradient">
 							{/* Animated Outer Border */}
-							<div className="absolute inset-0  pointer-events-none animate-border-gradient"></div>
+							<InViewUp>
+								<div className="absolute inset-0  pointer-events-none animate-border-gradient"></div>
 
-							<h3 className="text-lg sm:text-xl font-semibold text-gray-200 mb-4 relative z-10">
-								{skillGroup.category}
-							</h3>
+								<h3 className="text-lg sm:text-xl font-semibold text-gray-200 mb-4 relative z-10">
+									{skillGroup.category}
+								</h3>
 
-							<div className="grid grid-cols-2 md:grid-cols-3 gap-4 content-center relative z-10">
-								{skillGroup.items.map((skill) => (
-									<div
-										key={skill.name}
-										className="h-20 sm:h-24 flex flex-col items-center justify-center p-3 sm:p-4 shadow-2xl border border-gray-50  transition-all duration-300 hover:scale-105">
-										{skill.icon}
-										<span className="mt-2 text-xs sm:text-sm font-semibold text-gray-300 text-center ">
-											{skill.name}
-										</span>
-									</div>
-								))}
-							</div>
+								<div className="grid grid-cols-2 md:grid-cols-3 gap-4 content-center relative z-10">
+									{skillGroup.items.map((skill) => (
+										<div
+											key={skill.name}
+											className="h-20 sm:h-24 flex flex-col items-center justify-center p-3 sm:p-4 shadow-2xl border border-gray-50  transition-all duration-300 hover:scale-105">
+											{skill.icon}
+											<span className="mt-2 text-xs sm:text-sm font-semibold text-gray-300 text-center ">
+												{skill.name}
+											</span>
+										</div>
+									))}
+								</div>
+							</InViewUp>
 						</div>
 					))}
 				</div>
