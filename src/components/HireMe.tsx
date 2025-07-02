@@ -3,23 +3,26 @@
 import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import InViewUp from "./animations/InViewUp";
 
 const HireUs: React.FC = () => {
 	return (
 		<section className="py-16">
 			<div className="mx-auto px-6 lg:w-3/4 text-center">
 				{/* Title */}
-				<h2 className="text-4xl font-bold text-white mb-6">Hire Us</h2>
-				<p className="text-lg text-gray-300 max-w-2xl mx-auto">
-					🚀 We are passionate Fullstack Developers skilled in{" "}
-					<span className="text-[#8A2BE2]">
-						React, Next.js, Node.js, and MongoDB
-					</span>
-					. We build <span className="text-[#8A2BE2]">high-performance</span>,
-					scalable web apps with a focus on{" "}
-					<span className="text-[#8A2BE2]">UI/UX and backend efficiency</span>.
-				</p>
-
+				<InViewUp>
+					<h2 className="text-4xl font-bold text-white mb-6">Hire Us</h2>
+					<p className="text-lg text-gray-300 max-w-2xl mx-auto">
+						🚀 We are passionate Fullstack Developers skilled in{" "}
+						<span className="text-[#8A2BE2]">
+							React, Next.js, Node.js, and MongoDB
+						</span>
+						. We build <span className="text-[#8A2BE2]">high-performance</span>,
+						scalable web apps with a focus on{" "}
+						<span className="text-[#8A2BE2]">UI/UX and backend efficiency</span>
+						.
+					</p>
+				</InViewUp>
 				{/* Profiles Grid */}
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-10">
 					{[
@@ -46,34 +49,38 @@ const HireUs: React.FC = () => {
 							style={{
 								borderImage: "linear-gradient(135deg, #4B0082, #8A2BE2) 1",
 							}}>
-							<h3 className="text-xl font-semibold text-white">
-								{person.name}
-							</h3>
-							<p className="text-gray-400">{person.role}</p>
-
+							<InViewUp>
+								<h3 className="text-xl font-semibold text-white">
+									{person.name}
+								</h3>
+								<p className="text-gray-400">{person.role}</p>
+							</InViewUp>
 							{/* Social Links */}
-							<div className="flex gap-6 mt-4">
-								<Link
-									href={person.github}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-gray-300 hover:text-[#8A2BE2] transition">
-									<FaGithub size={30} />
-								</Link>
-								<Link
-									href={person.linkedin}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="text-blue-500 hover:text-blue-400 transition">
-									<FaLinkedin size={30} />
-								</Link>
-							</div>
-
-							{/* Contact Info */}
-							<p className="mt-3 text-sm text-gray-400">
-								📞 {person.phone} <br />
-								📧 {person.email}
-							</p>
+							<InViewUp>
+								<div className="flex items-center justify-center gap-6 mt-4">
+									<Link
+										href={person.github}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-gray-300 hover:text-[#8A2BE2] transition">
+										<FaGithub size={30} />
+									</Link>
+									<Link
+										href={person.linkedin}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="text-blue-500 hover:text-blue-400 transition">
+										<FaLinkedin size={30} />
+									</Link>
+								</div>
+							</InViewUp>
+							<InViewUp>
+								{/* Contact Info */}
+								<p className="mt-3 text-sm text-gray-400">
+									📞 {person.phone} <br />
+									📧 {person.email}
+								</p>
+							</InViewUp>
 						</div>
 					))}
 				</div>

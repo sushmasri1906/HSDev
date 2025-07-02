@@ -1,7 +1,7 @@
 "use client";
 import {
 	FaCode,
-	FaPaintBrush,
+	// FaPaintBrush,
 	FaShoppingCart,
 	FaBriefcase,
 	FaUserTie,
@@ -11,6 +11,7 @@ import {
 	FaCalendarAlt,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import InViewUp from "./animations/InViewUp";
 
 const services = [
 	{
@@ -43,12 +44,12 @@ const services = [
 			"Showcase your work with a beautifully designed and responsive portfolio website tailored to your style.",
 		icon: <FaUserTie className="text-red-400 text-5xl" />,
 	},
-	{
-		title: "Logos & Branding",
-		description:
-			"Custom logo designs and branding to create a unique and recognizable identity for your business.",
-		icon: <FaPaintBrush className="text-pink-400 text-5xl" />,
-	},
+	// {
+	// 	title: "Logos & Branding",
+	// 	description:
+	// 		"Custom logo designs and branding to create a unique and recognizable identity for your business.",
+	// 	icon: <FaPaintBrush className="text-pink-400 text-5xl" />,
+	// },
 	{
 		title: "Payment Gateway Integration",
 		description:
@@ -56,7 +57,7 @@ const services = [
 		icon: <FaCreditCard className="text-yellow-400 text-5xl" />,
 	},
 	{
-		title: "Admin Content Management",
+		title: "Content Management System (CMS)",
 		description:
 			"Custom admin panels to easily manage content, images, blogs, and more using secure authentication and databases.",
 		icon: <FaUserTie className="text-cyan-400 text-5xl" />, // reused icon for style consistency
@@ -77,62 +78,72 @@ const services = [
 
 const ServicesSection = () => {
 	return (
-		<section className="bg-[#0f0f0f] py-16 px-4">
-			<div className="max-w-6xl mx-auto text-center">
-				<motion.h2
-					initial={{ opacity: 0, y: -20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-					className="text-3xl sm:text-4xl font-bold text-white">
-					Services We Offer 🚀
-				</motion.h2>
-				<p className="text-md sm:text-lg text-white mt-4">
-					We provide expert development services to bring your ideas to life
-					with modern and scalable solutions.
-				</p>
+		<InViewUp>
+			<section className="bg-[#0f0f0f] py-16 px-4">
+				<div className="max-w-6xl mx-auto text-center">
+					<motion.h2
+						initial={{ opacity: 0, y: -20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.6 }}
+						className="text-3xl sm:text-4xl font-bold text-white">
+						Services We Offer 🚀
+					</motion.h2>
+					<p className="text-md sm:text-lg text-white mt-4">
+						We provide expert development services to bring your ideas to life
+						with modern and scalable solutions.
+					</p>
 
-				{/* Services Grid */}
-				<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-					{services.map((service, index) => (
-						<motion.div
-							key={index}
-							initial={{ opacity: 0, scale: 0.9 }}
-							animate={{ opacity: 1, scale: 1 }}
-							transition={{ duration: 0.6, delay: index * 0.2 }}
-							className="relative p-6 ">
-							{/* Animated Outer Border */}
-							<div className="absolute inset-0  border-2 pointer-events-none animate-border-gradient"></div>
+					{/* Services Grid */}
+					<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+						{services.map((service, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, scale: 0.9 }}
+								whileInView={{
+									opacity: 1,
+									scale: 1,
+									transition: { duration: 0.6 },
+								}}
+								whileHover={{
+									backgroundColor: "rgb(138, 43, 226, 0.1)",
+									transition: { duration: 0.2 },
+								}}
+								viewport={{ once: true }}
+								className="relative p-6 shadow-sm shadow-[rgb(138,43,226)] rounded-2xl">
+								{/* Animated Outer Border */}
+								{/* <div className="absolute inset-0   "></div> */}
 
-							<div className="flex justify-center mb-4">{service.icon}</div>
-							<h3 className="text-lg sm:text-xl font-semibold text-white">
-								{service.title}
-							</h3>
-							<p className="text-gray-300 mt-2 text-sm sm:text-base">
-								{service.description}
-							</p>
-						</motion.div>
-					))}
+								<div className="flex justify-center mb-4">{service.icon}</div>
+								<h3 className="text-lg sm:text-xl font-semibold text-white">
+									{service.title}
+								</h3>
+								<p className="text-gray-300 mt-2 text-sm sm:text-base">
+									{service.description}
+								</p>
+							</motion.div>
+						))}
+					</div>
 				</div>
-			</div>
 
-			{/* Gradient Border Animation */}
-			<style jsx>{`
-				@keyframes borderAnimation {
-					0% {
-						border-color: #4b0082;
+				{/* Gradient Border Animation */}
+				<style jsx>{`
+					@keyframes borderAnimation {
+						0% {
+							border-color: #4b0082;
+						}
+						50% {
+							border-color: #8a2be2;
+						}
+						100% {
+							border-color: #4b0082;
+						}
 					}
-					50% {
-						border-color: #8a2be2;
+					.animate-border-gradient {
+						animation: borderAnimation 3s infinite alternate ease-in-out;
 					}
-					100% {
-						border-color: #4b0082;
-					}
-				}
-				.animate-border-gradient {
-					animation: borderAnimation 3s infinite alternate ease-in-out;
-				}
-			`}</style>
-		</section>
+				`}</style>
+			</section>
+		</InViewUp>
 	);
 };
 
