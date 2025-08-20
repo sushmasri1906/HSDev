@@ -1,7 +1,7 @@
 "use client";
+
 import {
 	FaCode,
-	// FaPaintBrush,
 	FaShoppingCart,
 	FaBriefcase,
 	FaUserTie,
@@ -17,134 +17,121 @@ const services = [
 	{
 		title: "Frontend Development",
 		description:
-			"We build stunning, responsive, and high-performance web applications using React, Next.js, and Tailwind CSS.",
-		icon: <FaCode className="text-blue-400 text-5xl" />,
+			"We craft responsive and scalable interfaces using React, Next.js, and Tailwind CSS — optimized for speed and usability.",
+		icon: (
+			<FaCode className="text-blue-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
 		title: "Backend Development",
 		description:
-			"We create powerful and scalable server-side applications with Node.js, Express, and MongoDB.",
-		icon: <FaServer className="text-green-400 text-5xl" />,
+			"Robust server-side architecture with Node.js, Express, and MongoDB to power your business applications securely.",
+		icon: (
+			<FaServer className="text-green-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
-		title: "E-commerce Websites",
+		title: "E-commerce Development",
 		description:
-			"We develop fast, secure, and feature-rich e-commerce platforms with payment integration and user-friendly UI.",
-		icon: <FaShoppingCart className="text-purple-400 text-5xl" />,
+			"High-converting, mobile-first online stores with Razorpay & PayPal integration — built for growth.",
+		icon: (
+			<FaShoppingCart className="text-purple-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
 		title: "Business Websites",
 		description:
-			"Professional and responsive websites to showcase your business and services online effectively.",
-		icon: <FaBriefcase className="text-orange-400 text-5xl" />,
+			"Corporate web presence with stunning design and lightning performance to reflect your brand authority.",
+		icon: (
+			<FaBriefcase className="text-orange-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
 		title: "Portfolio Websites",
 		description:
-			"Showcase your work with a beautifully designed and responsive portfolio website tailored to your style.",
-		icon: <FaUserTie className="text-red-400 text-5xl" />,
+			"Elegant and personalized portfolios to showcase work, skills, and personal branding with modern UI/UX.",
+		icon: (
+			<FaUserTie className="text-red-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
-	// {
-	// 	title: "Logos & Branding",
-	// 	description:
-	// 		"Custom logo designs and branding to create a unique and recognizable identity for your business.",
-	// 	icon: <FaPaintBrush className="text-pink-400 text-5xl" />,
-	// },
 	{
 		title: "Payment Gateway Integration",
 		description:
-			"Secure and seamless payment gateway integration for online transactions and e-commerce platforms.",
-		icon: <FaCreditCard className="text-yellow-400 text-5xl" />,
+			"End-to-end integration of Razorpay, Stripe, PayPal, and UPI — secure, fast, and seamless.",
+		icon: (
+			<FaCreditCard className="text-yellow-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
-		title: "Content Management System (CMS)",
+		title: "CMS Solutions",
 		description:
-			"Custom admin panels to easily manage content, images, blogs, and more using secure authentication and databases.",
-		icon: <FaUserTie className="text-cyan-400 text-5xl" />, // reused icon for style consistency
+			"Custom content management systems with secure authentication, admin dashboards, and data control.",
+		icon: (
+			<FaUserTie className="text-cyan-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
 		title: "Chat Applications",
 		description:
-			"Real-time chat solutions with WebSocket, Socket.io, and Firebase for seamless communication experiences.",
-		icon: <FaComments className="text-emerald-400 text-5xl" />,
+			"Real-time messaging platforms using WebSocket & Firebase — scalable, secure & engaging.",
+		icon: (
+			<FaComments className="text-emerald-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 	{
-		title: "Booking Applications",
+		title: "Booking Systems",
 		description:
-			"Powerful booking systems for events, appointments, or coworking spaces with calendar integrations.",
-		icon: <FaCalendarAlt className="text-indigo-400 text-5xl" />,
+			"Appointment & scheduling platforms with calendar sync, payment, and SMS/email alerts.",
+		icon: (
+			<FaCalendarAlt className="text-indigo-400 text-4xl group-hover:scale-110 transition" />
+		),
 	},
 ];
 
-const ServicesSection = () => {
+export default function ServicesSection() {
 	return (
 		<InViewUp>
-			<section className="bg-[#0f0f0f] py-16 px-4">
-				<div className="max-w-6xl mx-auto text-center">
+			<section
+				className="relative bg-cover bg-center bg-no-repeat py-10 px-6 sm:px-10 lg:px-24"
+				style={{
+					backgroundImage:
+						"url('https://res.cloudinary.com/dgulr1hgd/image/upload/v1752588140/raw_kvkdrv.png')",
+				}}>
+				<div className="relative z-10 max-w-7xl mx-auto text-center">
 					<motion.h2
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
-						className="text-3xl sm:text-4xl font-bold text-white">
-						Services We Offer 🚀
+						className="text-3xl sm:text-4xl font-extrabold text-white">
+						Services We Offer
 					</motion.h2>
-					<p className="text-md sm:text-lg text-white mt-4">
-						We provide expert development services to bring your ideas to life
-						with modern and scalable solutions.
+					<p className="text-md sm:text-lg text-gray-300 mt-3 max-w-3xl mx-auto">
+						Custom software solutions tailored for scale, performance, and
+						user-centric experiences.
 					</p>
 
-					{/* Services Grid */}
-					<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					{/* Grid */}
+					<div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 						{services.map((service, index) => (
 							<motion.div
 								key={index}
-								initial={{ opacity: 0, scale: 0.9 }}
-								whileInView={{
-									opacity: 1,
-									scale: 1,
-									transition: { duration: 0.6 },
-								}}
-								whileHover={{
-									backgroundColor: "rgb(138, 43, 226, 0.1)",
-									transition: { duration: 0.2 },
-								}}
+								initial={{ opacity: 0, y: 30 }}
+								whileInView={{ opacity: 1, y: 0 }}
 								viewport={{ once: true }}
-								className="relative p-6 shadow-sm shadow-[rgb(138,43,226)] rounded-2xl">
-								{/* Animated Outer Border */}
-								{/* <div className="absolute inset-0   "></div> */}
-
-								<div className="flex justify-center mb-4">{service.icon}</div>
-								<h3 className="text-lg sm:text-xl font-semibold text-white">
+								transition={{ duration: 0.4, delay: index * 0.05 }}
+								className="group bg-[#0e0e25]/80 backdrop-blur rounded-2xl p-6 text-left border border-[#1c1c3b] hover:border-[#1c00d3] hover:shadow-lg hover:shadow-[#1c00d3]/50 transition duration-300">
+								<div className="mb-4">{service.icon}</div>
+								<h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#000fb5] transition">
 									{service.title}
 								</h3>
-								<p className="text-gray-300 mt-2 text-sm sm:text-base">
+								<p className="text-gray-400 text-sm leading-relaxed">
 									{service.description}
 								</p>
 							</motion.div>
 						))}
 					</div>
 				</div>
-
-				{/* Gradient Border Animation */}
-				<style jsx>{`
-					@keyframes borderAnimation {
-						0% {
-							border-color: #4b0082;
-						}
-						50% {
-							border-color: #8a2be2;
-						}
-						100% {
-							border-color: #4b0082;
-						}
-					}
-					.animate-border-gradient {
-						animation: borderAnimation 3s infinite alternate ease-in-out;
-					}
-				`}</style>
 			</section>
 		</InViewUp>
 	);
-};
-
-export default ServicesSection;
+}

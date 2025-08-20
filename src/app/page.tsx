@@ -1,24 +1,20 @@
-import ServicesSection from "@/components/ServicesSection";
-import TechStack from "@/components/TechStack";
-import Testimonials from "@/components/Testimonials";
-import Certifications from "@/components/Certifications";
-import HireUs from "@/components/HireMe";
-import PricingCards from "@/components/Pricing";
-import HeroSection from "@/components/Hero/HeroSection";
-import Projects from "@/components/Projects";
+import HomeHero from "@/components/Home/HomeHero";
+import React from "react";
+import LogoSection from "@/components/Home/LogoSection";
+import HeroSection from "@/components/Home/HeroSection";
+import WhatWeBuild from "@/components/Home/WhatWeBuild";
+import Testimonials from "@/components/Home/Testimonials";
 
-export default function Home() {
+function page() {
 	return (
-		<div>
+		<>
+			<HomeHero />
+			<LogoSection />
 			<HeroSection />
-			<ServicesSection />
-			<Projects />
-			<TechStack />
-
-			<Certifications />
-			<HireUs />
-			<PricingCards />
+			<WhatWeBuild />
 			<Testimonials />
-		</div>
+		</>
 	);
 }
+
+export default page;
