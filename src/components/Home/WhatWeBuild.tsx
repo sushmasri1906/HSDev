@@ -223,7 +223,7 @@ export default function WhatWeBuild() {
 								{/* CTA line */}
 								<div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center gap-3">
 									<a
-										href="#contact"
+										href="/contact"
 										className="inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium ring-1 ring-white/15 hover:ring-[color:rgba(28,0,211,0.5)] focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[color:rgba(28,0,211,0.7)] focus-visible:ring-offset-[#06060F]"
 										style={{ background: "rgba(255,255,255,0.03)" }}>
 										Start a project

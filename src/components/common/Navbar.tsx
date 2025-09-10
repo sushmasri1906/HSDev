@@ -12,10 +12,6 @@ const navLinks = [
 	{ href: "/", icon: <FaHome /> },
 	{ href: "/about", label: "About" },
 	{ href: "/services", label: "Services" },
-	// { href: "/blog", label: "blog" },
-
-	// { href: "/portfolio", label: "Portfolio" },
-	// { href: "/quote", label: "quote" },
 	{ href: "/contact", label: "Contact" },
 ];
 
@@ -75,7 +71,7 @@ export default function Navbar() {
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
 								onClick={() => setShowForm(true)}
-								className="bg-[#1c00d3] hover:bg-[#000fb5] px-4 py-1.5 rounded-md text-sm shadow-md shadow-[#1c00d3]/40 text-white font-semibold transition">
+								className="bg-[#1c00d3] hover:bg-[#000fb5] px-4 py-1.5 rounded-md text-sm text-white font-semibold transition">
 								Request a Meeting
 							</motion.button>
 						</li>
@@ -117,7 +113,7 @@ export default function Navbar() {
 											setShowForm(true);
 											setIsOpen(false);
 										}}
-										className="block w-full bg-[#1c00d3] hover:bg-[#000fb5] text-white px-4 py-2 rounded-md text-center font-semibold shadow-md shadow-[#1c00d3]/40 transition">
+										className="block w-full bg-[#1c00d3] hover:bg-[#000fb5] text-white px-4 py-2 rounded-md text-center font-semibold transition">
 										Request a Meeting
 									</motion.button>
 								</li>
@@ -127,24 +123,29 @@ export default function Navbar() {
 				</AnimatePresence>
 			</nav>
 
-			{/* Meeting Modal */}
-			{showForm && (
-				<div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+			{/* Minimal Meeting Modal */}
+			<AnimatePresence>
+				{showForm && (
 					<motion.div
-						initial={{ scale: 0.8, opacity: 0 }}
-						animate={{ scale: 1, opacity: 1 }}
-						exit={{ scale: 0.8, opacity: 0 }}
-						className="bg-white text-black p-6 rounded-xl w-full max-w-md shadow-2xl relative">
-						<button
-							onClick={() => setShowForm(false)}
-							className="absolute top-3 right-3 text-2xl text-gray-500 hover:text-black"
-							aria-label="Close">
-							×
-						</button>
-						<MeetingRequestForm />
-					</motion.div>
-				</div>
-			)}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  className="fixed inset-0 z-[999] flex items-center justify-center"
+>
+  <div className="relative w-full max-w-md">
+    <button
+      onClick={() => setShowForm(false)}
+      className="absolute top-2 right-2 text-black text-xl"
+    >
+      ×
+    </button>
+
+    <MeetingRequestForm />
+  </div>
+</motion.div>
+
+				)}
+			</AnimatePresence>
 		</>
 	);
 }

@@ -185,7 +185,7 @@ function LogoCard({ src, alt }: { src: string; alt: string }) {
 				className="absolute inset-0 -z-10 rounded-2xl blur-2xl opacity-0 group-hover:opacity-70 transition"
 				style={{
 					background:
-						"radial-gradient(60% 60% at 50% 50%, rgba(28,0,211,0.55), transparent)",
+						"bg",
 				}}
 			/>
 		</div>

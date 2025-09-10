@@ -119,7 +119,7 @@ export default function HeroSection() {
 			<AnimatePresence>
 				{showForm && (
 					<motion.div
-						className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+						className="fixed inset-0 z-50 flex items-center justify-center  p-4"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
@@ -131,7 +131,7 @@ export default function HeroSection() {
 							animate={{ scale: 1, y: 0, opacity: 1 }}
 							exit={{ scale: 0.96, y: 8, opacity: 0 }}
 							transition={{ type: "spring", stiffness: 160, damping: 16 }}
-							className="relative w-full max-w-md rounded-xl bg-white text-black p-6 shadow-2xl">
+							className="relative w-full max-w-md rounded-xl text-black p-6 shadow-2xl">
 							<button
 								onClick={() => setShowForm(false)}
 								className="absolute top-3 right-3 text-2xl text-gray-500 hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1c00d3] rounded"

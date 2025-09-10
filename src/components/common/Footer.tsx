@@ -2,16 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-
-const ACCENT = "#1c00d3";
+import {
+	FaFacebookF,
+	FaInstagram,
+	FaLinkedinIn,
+	FaTwitter,
+} from "react-icons/fa";
 
 export default function Footer() {
 	const year = new Date().getFullYear();
 
 	return (
 		<footer className="relative overflow-hidden bg-black text-white py-12 px-6 md:px-20">
-			{/* faint blue dev-grid (very subtle) */}
+			{/* faint blue dev-grid */}
 			<div
 				aria-hidden
 				className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -22,7 +25,6 @@ export default function Footer() {
 				}}
 			/>
 
-			{/* Main Grid */}
 			<div className="relative grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-white/10 pb-10">
 				{/* Logo & Intro */}
 				<div className="relative">
@@ -39,9 +41,31 @@ export default function Footer() {
 						</div>
 					</div>
 					<p className="text-gray-400 mb-4 leading-relaxed">
-						We craft high-performance digital experiences that deliver real
-						business outcomes using modern tech like Next.js & React.
+						Crafting high-performance digital experiences with modern tech like
+						Next.js & React.
 					</p>
+					<div className="flex items-center gap-4 mt-2">
+						<Link
+							href="#"
+							className="text-gray-400 hover:text-white transition">
+							<FaFacebookF />
+						</Link>
+						<Link
+							href="#"
+							className="text-gray-400 hover:text-white transition">
+							<FaInstagram />
+						</Link>
+						<Link
+							href="#"
+							className="text-gray-400 hover:text-white transition">
+							<FaLinkedinIn />
+						</Link>
+						<Link
+							href="#"
+							className="text-gray-400 hover:text-white transition">
+							<FaTwitter />
+						</Link>
+					</div>
 				</div>
 
 				{/* Quick Links */}
@@ -66,36 +90,28 @@ export default function Footer() {
 					</ul>
 				</div>
 
-				{/* Newsletter */}
+				{/* Let’s Connect */}
 				<div>
-					<h3 className="text-xl font-semibold mb-4">
-						Get the Latest Inspiration
-					</h3>
-					<form
-						onSubmit={(e) => {
-							e.preventDefault();
-							// TODO: wire up your subscribe action here
-						}}
-						className="group">
-						<div className="relative">
-							<input
-								type="email"
-								required
-								placeholder="Enter your email *"
-								className="w-full p-3 pr-4 rounded-lg bg-white/5 text-white placeholder-gray-400 border border-white/10 focus:outline-none focus:ring-2 focus:ring-[rgba(28,0,211,0.6)] focus:border-transparent transition"
-							/>
-							<span
-								aria-hidden
-								className="pointer-events-none absolute inset-0 rounded-lg opacity-0 group-focus-within:opacity-100 transition"
-								style={{ boxShadow: `0 0 24px ${ACCENT}55` }}
-							/>
-						</div>
-						<button
-							type="submit"
-							className="mt-4 w-full rounded-lg font-semibold py-3 bg-[linear-gradient(180deg,#1c00d3,#14008f)] text-white ring-1 ring-white/10 hover:ring-[rgba(28,0,211,0.6)] shadow-[0_8px_30px_rgba(28,0,211,0.35)] hover:-translate-y-[1px] transition">
-							Subscribe
-						</button>
-					</form>
+					<h3 className="text-xl font-semibold mb-4">Let&apos;s Connect</h3>
+					<p className="text-gray-400 mb-3">
+						Have a project in mind? Reach out to us and let&apos;s build something
+						amazing together.
+					</p>
+					<div className="space-y-2 text-gray-400">
+						<p>
+							Email:{" "}
+							<Link href="mailto:hello@hsdev.com" className="hover:text-white">
+								hello@hsdev.com
+							</Link>
+						</p>
+						<p>
+							Phone:{" "}
+							<Link href="tel:+919133443441" className="hover:text-white">
+								+91 9133443441
+							</Link>
+						</p>
+						<p>Location: Hyderabad, India</p>
+					</div>
 				</div>
 			</div>
 
