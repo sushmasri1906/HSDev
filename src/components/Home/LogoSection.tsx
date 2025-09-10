@@ -1,6 +1,6 @@
 "use client";
+
 import Image from "next/image";
-import { motion, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const logoImages = [
@@ -13,21 +13,19 @@ const logoImages = [
 ];
 
 type LogoSectionProps = {
-	autoplay?: boolean;
-	intervalMs?: number; 
+	autoplay?: boolean; // autoplay carousel on mobile
+	intervalMs?: number; // autoplay interval
 };
 
 export default function LogoSection({
 	autoplay = true,
 	intervalMs = 3000,
 }: LogoSectionProps) {
-	const sectionRef = useRef<HTMLElement | null>(null);
-	const inView = useInView(sectionRef, { margin: "-15% 0% -15% 0%" });
-
-	// ==== Mobile carousel refs/logic ====
+	// Mobile carousel refs/logic
 	const railRef = useRef<HTMLDivElement | null>(null);
 	const autoplayRef = useRef<number | null>(null);
 
+	// scroll a step (mobile)
 	const scrollByStep = (dir: "left" | "right") => {
 		const rail = railRef.current;
 		if (!rail) return;
@@ -40,41 +38,57 @@ export default function LogoSection({
 		const rail = railRef.current;
 		if (!rail) return;
 
+		// respect reduced motion preference
+		const prefersReduced = window.matchMedia
+			? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+			: false;
+		if (prefersReduced) return;
+
 		const tick = () => scrollByStep("right");
 		autoplayRef.current = window.setInterval(tick, intervalMs);
+
 		const stop = () => {
-			if (autoplayRef.current) window.clearInterval(autoplayRef.current);
+			if (autoplayRef.current) {
+				window.clearInterval(autoplayRef.current);
+				autoplayRef.current = null;
+			}
 		};
+
 		rail.addEventListener("pointerenter", stop);
 		rail.addEventListener("pointerleave", () => {
+			// restart
+			if (autoplayRef.current) return;
 			autoplayRef.current = window.setInterval(tick, intervalMs);
 		});
+
+		// touchstart should pause autoplay while touching (mobile)
+		rail.addEventListener("touchstart", stop, { passive: true });
+		rail.addEventListener("touchend", () => {
+			if (autoplayRef.current) return;
+			autoplayRef.current = window.setInterval(tick, intervalMs);
+		});
+
 		return () => {
 			stop();
 			rail.removeEventListener("pointerenter", stop);
+			rail.removeEventListener("pointerleave", () => {});
+			rail.removeEventListener("touchstart", stop);
 		};
 	}, [autoplay, intervalMs]);
 
-	// ==== Animations ====
-	const container = {
-		hidden: { opacity: 0 },
-		visible: {
-			opacity: 1,
-			transition: { staggerChildren: 0.08, delayChildren: 0.05 },
-		},
-	};
-	const item = {
-		hidden: { opacity: 0, y: 14, scale: 0.98 },
-		visible: {
-			opacity: 1,
-			y: 0,
-			scale: 1,
-			transition: { type: "spring", stiffness: 120, damping: 16 },
-		},
-	};
-
 	return (
-		<section ref={sectionRef} className="bg-[#0b0b11] py-16 sm:py-20 px-6">
+		<section className="bg-[#0b0b11] py-16 sm:py-20 px-6">
+			{/* hide native scrollbar for the horizontal carousel */}
+			<style jsx global>{`
+				.no-scrollbar::-webkit-scrollbar {
+					display: none;
+				}
+				.no-scrollbar {
+					-ms-overflow-style: none;
+					scrollbar-width: none;
+				}
+			`}</style>
+
 			<div className="max-w-7xl mx-auto">
 				{/* Header chip (glassy) */}
 				<div className="relative mx-auto max-w-3xl rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 sm:p-8">
@@ -87,54 +101,58 @@ export default function LogoSection({
 
 				{/* Mobile: Carousel */}
 				<div className="mt-10 md:hidden relative">
+					{/* rail */}
 					<div
 						ref={railRef}
 						className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth px-1 py-2 no-scrollbar"
 						aria-label="Partner logos carousel">
 						{logoImages.map((src, i) => (
-							<motion.div
+							<div
 								key={i}
-								variants={item}
-								initial="hidden"
-								whileInView="visible"
-								viewport={{ amount: 0.5, once: false }}
 								className="snap-start shrink-0 basis-[72%] xs:basis-[65%] sm:basis-[55%]">
 								<LogoCard src={src} alt={`Logo ${i + 1}`} />
-							</motion.div>
+							</div>
 						))}
 					</div>
 
-					{/* Arrows */}
+					{/* Left / Right arrows (mobile) */}
 					<button
 						onClick={() => scrollByStep("left")}
 						aria-label="Previous logos"
-						className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full w-9 h-9 grid place-items-center border border-white/10 hover:bg-black/80">
+						className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full w-9 h-9 grid place-items-center border border-white/10 hover:bg-black/80 z-10">
 						‹
 					</button>
 					<button
 						onClick={() => scrollByStep("right")}
 						aria-label="Next logos"
-						className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full w-9 h-9 grid place-items-center border border-white/10 hover:bg-black/80">
+						className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full w-9 h-9 grid place-items-center border border-white/10 hover:bg-black/80 z-10">
 						›
 					</button>
+
+					{/* small pager dots for clarity */}
+					<div className="absolute left-1/2 -translate-x-1/2 bottom-2 flex gap-2">
+						{logoImages
+							.slice(0, Math.max(1, Math.min(6, logoImages.length)))
+							.map((_, i) => (
+								<span
+									key={i}
+									className="w-2 h-2 bg-white/30 rounded-full"
+									aria-hidden
+								/>
+							))}
+					</div>
 				</div>
 
-				{/* Desktop: Grid (staggered reveal, re-triggers) */}
-				<motion.div
-					variants={container}
-					initial="hidden"
-					animate={inView ? "visible" : "hidden"}
+				{/* Desktop: Grid (static, responsive) */}
+				<div
 					className="mt-10 hidden md:grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-6 lg:gap-8 items-center"
 					aria-label="Partner logos grid">
 					{logoImages.map((src, index) => (
-						<motion.div
-							key={index}
-							variants={item}
-							className="flex justify-center">
+						<div key={index} className="flex justify-center">
 							<LogoCard src={src} alt={`Logo ${index + 1}`} />
-						</motion.div>
+						</div>
 					))}
-				</motion.div>
+				</div>
 			</div>
 		</section>
 	);
@@ -144,12 +162,9 @@ function LogoCard({ src, alt }: { src: string; alt: string }) {
 	return (
 		<div className="group relative w-full max-w-[200px]">
 			<div
-				className="
-        relative mx-auto w-full rounded-xl border border-white/10 
-        bg-white from-white/10 via-white/5 to-white/0 
-        backdrop-blur-md overflow-hidden transition-transform 
-        duration-300 group-hover:scale-105
-      ">
+				className="relative mx-auto w-full rounded-xl border border-white/10
+				 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]
+				 backdrop-blur-md overflow-hidden transition-transform duration-300 group-hover:scale-105">
 				{/* Fixed safe area for logo */}
 				<div className="h-20 sm:h-24 p-4 flex items-center justify-center">
 					<Image
@@ -176,5 +191,3 @@ function LogoCard({ src, alt }: { src: string; alt: string }) {
 		</div>
 	);
 }
-
-

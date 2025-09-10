@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 
+// Keep your accent color
 const ACCENT = "#1c00d3";
 
 const categories = [
@@ -81,19 +82,7 @@ const categories = [
 	},
 ];
 
-const springy = {
-	hidden: { opacity: 0, y: 18, scale: 0.98 },
-	show: {
-		opacity: 1,
-		y: 0,
-		scale: 1,
-		transition: { type: "spring", stiffness: 140, damping: 16 },
-	},
-};
-
 export default function WhatWeBuild() {
-
-
 	const tilts = useMemo(
 		() => [
 			"sm:-rotate-[0.4deg]",
@@ -161,12 +150,8 @@ export default function WhatWeBuild() {
 					viewport={{ once: false, amount: 0.2 }}
 					className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 					{categories.map((category, idx) => (
-						<motion.article
-							initial="hidden"
-							whileInView="show"
-							viewport={{ once: false, amount: 0.3 }}
+						<article
 							key={idx}
-							variants={springy}
 							className={[
 								"group relative overflow-hidden rounded-2xl",
 								// Glass card + subtle border
@@ -248,7 +233,7 @@ export default function WhatWeBuild() {
 									</span>
 								</div>
 							</div>
-						</motion.article>
+						</article>
 					))}
 				</motion.div>
 

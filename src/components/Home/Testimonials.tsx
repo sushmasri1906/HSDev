@@ -63,25 +63,6 @@ function renderStars(rating: number) {
 	);
 }
 
-const container = {
-	hidden: {},
-	show: {
-		transition: {
-			staggerChildren: 0.12,
-		},
-	},
-};
-
-const card = {
-	hidden: { opacity: 0, y: 18, scale: 0.98 },
-	show: {
-		opacity: 1,
-		y: 0,
-		scale: 1,
-		transition: { type: "spring", stiffness: 140, damping: 16 },
-	},
-};
-
 export default function Testimonials() {
 	return (
 		<section className="relative overflow-hidden bg-[#06060F] py-20 px-4 md:px-8">
@@ -126,17 +107,10 @@ export default function Testimonials() {
 					partnerships.
 				</motion.p>
 
-				<motion.div
-					variants={container}
-					initial="hidden"
-					whileInView="show"
-					viewport={{ once: false, amount: 0.15 }}
-					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 					{testimonials.map((t, i) => (
-						<motion.article
-							key={`${t.name}-${i}`}
-							variants={card}
-							viewport={{ once: false, amount: 0.35 }}
+						<article
+							key={i}
 							className={[
 								"group relative overflow-hidden rounded-2xl",
 								"bg-white/[0.03] backdrop-blur-[2px] border border-white/10",
@@ -176,9 +150,9 @@ export default function Testimonials() {
 							</div>
 
 							<p className="text-gray-300 leading-relaxed">“{t.feedback}”</p>
-						</motion.article>
+						</article>
 					))}
-				</motion.div>
+				</div>
 
 				{/* Bottom accent */}
 				<div

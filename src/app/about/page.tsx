@@ -1,10 +1,10 @@
-import About from "@/components/About";
+import AboutHome from "@/components/about/AboutHome";
 import React from "react";
 
 function page() {
 	return (
 		<>
-			<About />
+			<AboutHome />
 		</>
 	);
 }
