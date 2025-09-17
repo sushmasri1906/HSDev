@@ -5,12 +5,14 @@ import HeroSection from "@/components/Home/HeroSection";
 import WhatWeBuild from "@/components/Home/WhatWeBuild";
 import Testimonials from "@/components/Home/Testimonials";
 import CTA from "@/components/about/CTA";
+import Projects from "@/components/Home/Projects";
 
 function page() {
 	return (
 		<>
 			<HomeHero />
 			<LogoSection />
+			<Projects/>
 			<HeroSection />
 			<WhatWeBuild />
 			<Testimonials />

@@ -8,7 +8,7 @@ import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 const ACCENT = "#1c00d3";
 
 type Testimonial = {
-	rating: number; // e.g. 4.5
+	rating: number;
 	feedback: string;
 	name: string;
 	image: string;
@@ -31,6 +31,15 @@ const testimonials: Testimonial[] = [
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744695457/mahesh_vgalio.jpg",
 	},
+	{
+		rating: 5.0,
+		feedback:
+			"The admin panel is really easy to use. I can add new spaces, update the gallery, and set whether a space is available or not without any trouble. The user side is smooth too, and everything works perfectly. HS Dev made it simple and efficient for both admins and users!",
+		name: "Rajesh",
+		image:
+			"https://res.cloudinary.com/dk0smdu0d/image/upload/v1758024373/WhatsApp_Image_2025-09-16_at_17.19.30_bfd962e4_ykyf5n.jpg",
+	},
+
 	// Add more freely — layout scales to 3 columns on large screens
 ];
 
