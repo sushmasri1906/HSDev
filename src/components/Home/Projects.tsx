@@ -54,11 +54,11 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Express", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1758018625/Screenshot_2025-09-16_160002_jisqhr.png",
-		link: "#",
+		link: "https://www.vrkisanparivaar.com/",
 		highlight: "Designed to scale across tier-2/3 regions",
 	},
 	{
-		title: "ULHC Health Card",
+		title: "Unity Life Health Care",
 		tagline: "Digital healthcare membership with hospital partnerships",
 		category: "Healthcare",
 		status: "In Progress",
@@ -70,7 +70,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1758018684/Screenshot_2025-09-16_160111_hbgfvy.png",
-		link: "#",
+		link: "https://www.unitylifehealthcare.com/",
 		highlight: "HIPAA-aligned flows for 5k+ members",
 	},
 	{
@@ -87,7 +87,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js 15", "Tailwind", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1742481482/Screenshot_2025-03-20_200747_g8lw3z.png",
-		link: "#",
+		link: "https://www.bizn.in/",
 		highlight: "Launched Beta with 250+ businesses onboarded",
 	},
 	{
@@ -103,7 +103,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Node/Express", "JWT", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1741339318/Screenshot_2025-03-07_145105_p5nwh5.png",
-		repo: "#",
+		link: "https://www.jaaaga.com/",
 		highlight: "Backend-driven KPIs powering reliability",
 	},
 	{
@@ -119,6 +119,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1742141216/Screenshot_2025-03-16_213636_ezv4a4.png",
+		link: "https://rolanplast.netlify.app/",
 		highlight: "Agentic pipeline under development",
 	},
 	{
@@ -134,6 +135,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1744710608/Screenshot_2025-04-15_151906_w836vq.png",
+		link: "https://www.bizwen.site/",
 		highlight: "Pilot community with 120+ members",
 	},
 	{
@@ -149,6 +151,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1747998268/Screenshot_2025-05-23_163334_vua8vh.png",
+		link: "https://www.biztimer.site/",
 		highlight: "Agentic time tracking (MVP in progress)",
 	},
 	{
@@ -164,6 +167,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1758019120/Screenshot_2025-09-16_160805_n1vziw.png",
+		link: "https://vr-agri-farms.vercel.app/",
 		highlight: "AI-first agri advisory (WIP)",
 	},
 	{
@@ -179,6 +183,7 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1753431994/Screenshot_2025-07-25_135621_dctjpp.png",
+		link: "https://sree-creative.vercel.app/",
 		highlight: "E-sign MVP under build",
 	},
 	{
@@ -194,6 +199,8 @@ const PROJECTS: Project[] = [
 		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1758019435/Screenshot_2025-09-16_161321_dzql6p.png",
+		link: "https://sri-laxmi.vercel.app/",
+
 		highlight: "Custom ERP build in progress",
 	},
 	{
@@ -206,9 +213,10 @@ const PROJECTS: Project[] = [
 			"Control panel management",
 			"Reports & analytics",
 		],
-		stack: ["Next.js", "Django/FastAPI", "Prisma", "PostgreSQL"],
+		stack: ["Next.js", "Prisma", "PostgreSQL"],
 		image:
 			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1758019435/Screenshot_2025-09-16_161336_n2rrtd.png",
+		link: "https://arihantcontrol.vercel.app/",
 		highlight: "Phase-1 automation dashboards (WIP)",
 	},
 ];

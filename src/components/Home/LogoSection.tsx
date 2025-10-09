@@ -6,6 +6,7 @@ const ACCENT = "#1c00d3";
 
 const DEFAULT_LOGOS = [
 	"https://res.cloudinary.com/dsq4uyqbb/image/upload/v1744796359/Logos_For_We_Work_t24ef3.png",
+	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1758015372/3_rua9gv.png",
 	"https://res.cloudinary.com/dgulr1hgd/image/upload/v1753545558/final_logo_1_mskpl9.png",
 	"https://res.cloudinary.com/dsq4uyqbb/image/upload/v1752936899/4_bgqtwl.jpg",
 	"https://res.cloudinary.com/dsq4uyqbb/image/upload/v1752936895/3_r2tlqy.jpg",

@@ -16,8 +16,7 @@ export default function HeroSection() {
 	const sectionRef = useRef<HTMLElement | null>(null);
 	const { scrollYProgress } = useScroll({
 		target: sectionRef,
-		// Start animating when the section's top hits 90% viewport,
-		// finish when its bottom hits 10% viewport — very reliable.
+
 		offset: ["start 0.9", "end 0.1"],
 	});
 

@@ -6,13 +6,15 @@ import WhatWeBuild from "@/components/Home/WhatWeBuild";
 import Testimonials from "@/components/Home/Testimonials";
 import CTA from "@/components/about/CTA";
 import Projects from "@/components/Home/Projects";
+import Pricing from "@/components/Home/Pricing";
 
 function page() {
 	return (
 		<>
 			<HomeHero />
 			<LogoSection />
-			<Projects/>
+			<Projects />
+			<Pricing />
 			<HeroSection />
 			<WhatWeBuild />
 			<Testimonials />
